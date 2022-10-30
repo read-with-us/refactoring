@@ -24,7 +24,7 @@
 ## 진행 상황
 
 - 기간: 10/29(토) ~ 12/18(일)
-- 스터디 멤버: [@yisu-kim](https://github.com/yisu-kim),
+- 스터디 멤버: [@yisu-kim](https://github.com/yisu-kim),[@sukyoungshin](https://github.com/sukyoungshin)
 
 | 회차 | 목차                                                                 | 날짜            | ✅  |
 | ---- | -------------------------------------------------------------------- | --------------- | --- |
