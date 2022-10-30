@@ -9,7 +9,7 @@
     리팩터링 2판 완독을 목표로 모여서 함께 읽는 북스터디
     <br />
     <br />
-    <a href="https://www.notion.so/yisu-kim/Refactoring-2-E-e75c3057d83b40098436abc2f1babb91">View Notion</a>
+    <a href="https://yisu-kim.notion.site/Refactoring-2-E-e75c3057d83b40098436abc2f1babb91">View Notion</a>
     <br />
     <br />
   </p>
