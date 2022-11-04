@@ -25,7 +25,7 @@
 
 - 기간: 10/29(토) ~ 12/18(일)
 - 스터디 멤버: [@yisu-kim](https://github.com/yisu-kim), [@sukyoungshin](https://github.com/sukyoungshin), [@wonjin-dev](https://github.com/wonjin-dev),
-  [@okyungjin](https://github.com/okyungjin)
+  [@okyungjin](https://github.com/okyungjin), [startdata](https://github.com/startdata), [Yummy-sk](https://github.com/Yummy-sk), [kimiszero](https://github.com/kimiszero), [Hyesooo](https://github.com/Hyesooo)
 
 | 회차 | 목차                                                                  | 날짜            | ✅  |
 | ---- | --------------------------------------------------------------------- | --------------- | --- |
