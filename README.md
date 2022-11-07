@@ -25,13 +25,13 @@
 
 - 기간: 10/29(토) ~ 12/18(일)
 - 스터디 멤버: [@yisu-kim](https://github.com/yisu-kim), [@sukyoungshin](https://github.com/sukyoungshin), [@wonjin-dev](https://github.com/wonjin-dev),
-  [@okyungjin](https://github.com/okyungjin), [@startdata](https://github.com/startdata), [@Yummy-sk](https://github.com/Yummy-sk), [@kimiszero](https://github.com/kimiszero), [@Hyesooo](https://github.com/Hyesooo)
+  [@okyungjin](https://github.com/okyungjin), [@startdata](https://github.com/startdata), [@Yummy-sk](https://github.com/Yummy-sk), [@Hyesooo](https://github.com/Hyesooo)
 
 | 회차 | 목차                                                                  | 날짜            | ✅  |
 | ---- | --------------------------------------------------------------------- | --------------- | --- |
 | 1    | [2장 리팩터링 원칙](ch02/리팩터링_원칙.md)                            | 2022/10/29 (토) | ✅  |
 | 2    | [3장 코드에서 나는 악취](ch03/코드에서_나는_악취.md)                  | 2022/11/05 (토) | ✅  |
-| 3    | [4장 테스트 구축](ch04/테스트_구축.md)                                | 2022/11/06 (일) |     |
+| 3    | [4장 테스트 구축](ch04/테스트_구축.md)                                | 2022/11/06 (일) | ✅  |
 | 4    | [6장 기본적인 리팩터링 (1)](<ch06/기본적인_리팩터링_(1).md>)          | 2022/11/12 (토) |     |
 | 5    | [6장 기본적인 리팩터링 (2)](<ch06/기본적인_리팩터링_(2).md>)          | 2022/11/13 (일) |     |
 | 6    | [7장 캡슐화](ch07/캡슐화.md)                                          | 2022/11/19 (토) |     |
