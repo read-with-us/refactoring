@@ -26,7 +26,7 @@ const spaceship = {
 
 spaceship.owner = getDefaultOwner();
 
-defaultOwner = { firstName: '레베카', lastName: '파슨스' };
+setDefaultOwner({ firstName: '레베카', lastName: '파슨스' });
 
 console.log('spaceship owner: ', spaceship.owner);
 console.log('default owner: ', defaultOwner);
