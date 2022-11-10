@@ -16,6 +16,10 @@ class Book {
   }
 
   zz_addReservation(customer, isPriority) {
+    console.assert(isPriority === true || isPriority === false, '%o', {
+      isPriority,
+      errorMsg: 'the isPriority is not boolean',
+    });
     this._reservations.push(customer);
   }
 }
