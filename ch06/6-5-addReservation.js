@@ -11,11 +11,7 @@ class Book {
     return this._reservations;
   }
 
-  addReservation(customer) {
-    this.zz_addReservation(customer, false);
-  }
-
-  zz_addReservation(customer, isPriority) {
+  addReservation(customer, isPriority) {
     console.assert(isPriority === true || isPriority === false, '%o', {
       isPriority,
       errorMsg: 'the isPriority is not boolean',
@@ -30,6 +26,6 @@ class Book {
 
 const book = new Book();
 const customer = { name: '마틴 파울러' };
-book.zz_addReservation(customer, false);
+book.addReservation(customer, false);
 
 console.log(book.reservations);
