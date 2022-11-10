@@ -2,7 +2,7 @@
  * p182 예시
  */
 
-function circum(radius) {
+function circumference(radius) {
   return 2 * Math.PI * radius;
 }
 
@@ -10,4 +10,4 @@ function circum(radius) {
  * 예시 실행을 위한 임의의 코드
  */
 
-console.log(circum(6));
+console.log(circumference(6));
