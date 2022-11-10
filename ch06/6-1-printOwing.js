@@ -4,7 +4,7 @@
 
 function printOwing(invoice) {
   printBanner();
-  let outstanding = calculateOutstanding(invoice); // <- 함수 추출 완료. 추출한 함수가 반환한 값을 원래 변수에 저장한다.
+  const outstanding = calculateOutstanding(invoice);
   recordDueDate(invoice);
   printDetails(invoice, outstanding);
 }
@@ -25,11 +25,11 @@ function recordDueDate(invoice) {
 }
 
 function calculateOutstanding(invoice) {
-  let outstanding = 0;
+  let result = 0; // <- 변수 이름 변경
   for (const o of invoice.orders) {
-    outstanding += o.amount;
+    result += o.amount;
   }
-  return outstanding;
+  return result;
 }
 
 function printDetails(invoice, outstanding) {
