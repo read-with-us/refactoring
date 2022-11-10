@@ -4,11 +4,11 @@
 
 let defaultOwner = { firstName: '마틴', lastName: '파울러' };
 
-function getDefaultOwner() {
+export function getDefaultOwner() {
   return defaultOwner;
 }
 
-function setDefaultOwner(arg) {
+export function setDefaultOwner(arg) {
   defaultOwner = arg;
 }
 
