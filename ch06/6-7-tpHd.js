@@ -2,14 +2,14 @@
  * p195 예시
  */
 
-let tpHd = 'untitled';
+let _title = 'untitled';
 
 function title() {
-  return tpHd;
+  return _title;
 }
 
 function setTitle(arg) {
-  tpHd = arg;
+  _title = arg;
 }
 
 /**
@@ -30,4 +30,4 @@ result += `<h1>${title()}</h1>`;
 setTitle(obj['articleTitle']);
 
 console.log(result);
-console.log(tpHd);
+console.log(_title);
