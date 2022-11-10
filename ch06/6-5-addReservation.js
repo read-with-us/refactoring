@@ -30,6 +30,6 @@ class Book {
 
 const book = new Book();
 const customer = { name: '마틴 파울러' };
-book.addReservation(customer);
+book.zz_addReservation(customer, false);
 
 console.log(book.reservations);
