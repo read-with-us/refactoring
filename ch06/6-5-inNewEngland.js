@@ -23,6 +23,8 @@ const someCustomers = [
  * 예시 호출
  */
 
-const newEnglanders = someCustomers.filter((c) => inNewEngland(c));
+const newEnglanders = someCustomers.filter((c) =>
+  xxNEWinNewEngland(c.address.state)
+);
 
 console.log(newEnglanders);
