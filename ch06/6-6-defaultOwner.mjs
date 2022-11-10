@@ -24,7 +24,7 @@ const spaceship = {
  * 예시 참조 & 갱신
  */
 
-spaceship.owner = defaultOwner;
+spaceship.owner = getDefaultOwner();
 
 defaultOwner = { firstName: '레베카', lastName: '파슨스' };
 
