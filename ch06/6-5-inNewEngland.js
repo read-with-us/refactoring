@@ -2,11 +2,7 @@
  * p186 예시
  */
 
-function inNewEngland(aCustomer) {
-  return xxNEWinNewEngland(aCustomer.address.state);
-}
-
-function xxNEWinNewEngland(stateCode) {
+function inNewEngland(stateCode) {
   return ['MA', 'CT', 'ME', 'VT', 'NH', 'RI'].includes(stateCode);
 }
 
@@ -24,7 +20,7 @@ const someCustomers = [
  */
 
 const newEnglanders = someCustomers.filter((c) =>
-  xxNEWinNewEngland(c.address.state)
+  inNewEngland(c.address.state)
 );
 
 console.log(newEnglanders);
