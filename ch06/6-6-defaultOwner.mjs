@@ -2,14 +2,14 @@
  * p190 예시
  */
 
-let defaultOwner = { firstName: '마틴', lastName: '파울러' };
+let defaultOwnerData = { firstName: '마틴', lastName: '파울러' };
 
-export function getDefaultOwner() {
-  return defaultOwner;
+export function defaultOwner() {
+  return defaultOwnerData;
 }
 
 export function setDefaultOwner(arg) {
-  defaultOwner = arg;
+  defaultOwnerData = arg;
 }
 
 /**
@@ -24,9 +24,9 @@ const spaceship = {
  * 예시 참조 & 갱신
  */
 
-spaceship.owner = getDefaultOwner();
+spaceship.owner = defaultOwner();
 
 setDefaultOwner({ firstName: '레베카', lastName: '파슨스' });
 
 console.log('spaceship owner: ', spaceship.owner);
-console.log('default owner: ', defaultOwner);
+console.log('default owner: ', defaultOwnerData);
