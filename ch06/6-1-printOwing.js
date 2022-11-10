@@ -6,7 +6,7 @@ function printOwing(invoice) {
   printBanner();
 
   // 미해결 채무(outstanding) 계산
-  let outstanding = 0; // <- 맨 위에 있던 선언문을 이 위치로 이동
+  let outstanding = 0;
   for (const o of invoice.orders) {
     outstanding += o.amount;
   }
@@ -28,6 +28,14 @@ function recordDueDate(invoice) {
     today.getMonth(),
     today.getDate() + 30
   );
+}
+
+function calculateOutstanding(invoice) {
+  let outstanding = 0; // <- 추출할 코드 복사
+  for (const o of invoice.orders) {
+    outstanding += o.amount;
+  }
+  return outstanding; // <- 수정된 값 반환
 }
 
 function printDetails(invoice, outstanding) {
