@@ -4,6 +4,14 @@
 
 let tpHd = 'untitled';
 
+function title() {
+  return tpHd;
+}
+
+function setTitle(arg) {
+  tpHd = arg;
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -17,9 +25,9 @@ const obj = {
  * 예시 참조 & 수정
  */
 
-result += `<h1>${tpHd}</h1>`;
+result += `<h1>${title()}</h1>`;
 
-tpHd = obj['articleTitle'];
+setTitle(obj['articleTitle']);
 
 console.log(result);
 console.log(tpHd);
