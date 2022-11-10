@@ -3,16 +3,15 @@
  */
 
 function printOwing(invoice) {
-  let outstanding = 0;
-
   printBanner();
 
   // 미해결 채무(outstanding) 계산
+  let outstanding = 0; // <- 맨 위에 있던 선언문을 이 위치로 이동
   for (const o of invoice.orders) {
     outstanding += o.amount;
   }
 
-  recordDueDate(invoice); // <- 마감일 설정 로직을 함수로 추출
+  recordDueDate(invoice);
   printDetails(invoice, outstanding);
 }
 
