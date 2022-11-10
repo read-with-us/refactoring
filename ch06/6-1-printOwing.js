@@ -12,21 +12,23 @@ function printOwing(invoice) {
     outstanding += o.amount;
   }
 
-  // 마감일 기록
-  const today = Clock.today;
-  invoice.dueDate = new Date(
-    today.getFullYear(),
-    today.getMonth(),
-    today.getDate() + 30
-  );
-
-  printDetails(invoice, outstanding); // <- 앞의 예와 달리 지역 변수를 매개변수로 전달
+  recordDueDate(invoice); // <- 마감일 설정 로직을 함수로 추출
+  printDetails(invoice, outstanding);
 }
 
 function printBanner() {
   console.log('*******************');
   console.log('**** 고객 채무 ****');
   console.log('*******************');
+}
+
+function recordDueDate(invoice) {
+  const today = Clock.today;
+  invoice.dueDate = new Date(
+    today.getFullYear(),
+    today.getMonth(),
+    today.getDate() + 30
+  );
 }
 
 function printDetails(invoice, outstanding) {
