@@ -12,7 +12,6 @@ public static void main(String[] args) {
 }
 
 static void run(String[] args) throws IOException {
-  if (args.length == 0) throw new RuntimeException("파일명을 입력하세요.");
   CommandLine commandLine = new CommandLine();
   return countOrders(commandLine);
 }
@@ -34,6 +33,7 @@ private class CommandLine {
 
   public CommandLine(String[] args) {
     this.args = args;
+    if (args.length == 0) throw new RuntimeException("파일명을 입력하세요.");
   }
 
   String filename() {
