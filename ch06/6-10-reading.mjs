@@ -8,7 +8,7 @@ const reading = { customer: 'ivan', quantity: 10, month: 5, year: 2017 };
 
 function enrichReading(original) {
   const result = _.cloneDeep(original);
-  result.baseCharge = calculateBaseCharge(result); // <- 미가공 측정값에 기본 소비량을 부가 정보로 덧붙임
+  result.baseCharge = calculateBaseCharge(result);
   return result;
 }
 
@@ -63,6 +63,6 @@ console.log(taxableCharge);
 
 const rawReading3 = acquireReading();
 const aReading3 = enrichReading(rawReading3);
-const basicChargeAmount = calculateBaseCharge(aReading3);
+const basicChargeAmount = aReading3.baseCharge;
 
 console.log(basicChargeAmount);
