@@ -25,7 +25,7 @@ class Reading {
     return this._year;
   }
 
-  get calculateBaseCharge() {
+  get baseCharge() {
     return baseRate(this.month, this.year) * this.quantity;
   }
 }
@@ -77,6 +77,6 @@ console.log(taxableCharge);
 
 const rawReading3 = acquireReading();
 const aReading3 = new Reading(rawReading3);
-const basicChargeAmount = aReading3.calculateBaseCharge;
+const basicChargeAmount = aReading3.baseCharge;
 
 console.log(basicChargeAmount);
