@@ -42,8 +42,9 @@ function taxThreshold(year) {
  * 예시 호출 (1)
  */
 
-const aReading = acquireReading();
-const baseCharge = baseRate(aReading.month, aReading.year) * aReading.quantity;
+const rawReading = acquireReading();
+const aReading = enrichReading(rawReading);
+const baseCharge = aReading.baseCharge;
 
 console.log(baseCharge);
 
