@@ -14,13 +14,13 @@ public static void main(String[] args) {
 static void run(String[] args) throws IOException {
   if (args.length == 0) throw new RuntimeException("파일명을 입력하세요.");
   CommandLine commandLine = new CommandLine();
-  String filename = args[args.length - 1];
+  commandLine.filename = args[args.length - 1];
   commandLine.onlyCountReady = Stream.of(args).anyMatch(arg -> "-r".equals(arg));
-  return countOrders(commandLine, filename);
+  return countOrders(commandLine);
 }
 
-private static long countOrders(CommandLine commandLine, String filename) throws IOException {
-  File input = Paths.get(filename).toFile();
+private static long countOrders(CommandLine commandLine) throws IOException {
+  File input = Paths.get(commandLine.filename).toFile();
   ObjectMapper mapper = new ObjectMapper();
   Order[] orders = mapper.readValue(input, Order[].class);
   if(commandLine.onlyCountReady)
@@ -31,4 +31,5 @@ private static long countOrders(CommandLine commandLine, String filename) throws
 
 private static class CommandLine {
   boolean onlyCountReady;
+  String filename;
 }
