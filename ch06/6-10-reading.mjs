@@ -9,6 +9,10 @@ const reading = { customer: 'ivan', quantity: 10, month: 5, year: 2017 };
 function enrichReading(original) {
   const result = _.cloneDeep(original);
   result.baseCharge = calculateBaseCharge(result);
+  result.taxableCharge = Math.max(
+    0,
+    result.baseCharge - taxThreshold(result.year)
+  );
   return result;
 }
 
@@ -54,10 +58,7 @@ console.log(baseCharge);
 
 const rawReading2 = acquireReading();
 const aReading2 = enrichReading(rawReading2);
-const taxableCharge = Math.max(
-  0,
-  aReading2.baseCharge - taxThreshold(aReading2.year)
-);
+const taxableCharge = aReading2.taxableCharge;
 
 console.log(taxableCharge);
 
