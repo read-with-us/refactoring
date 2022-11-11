@@ -8,6 +8,12 @@ function priceOrder(product, quantity, shippingMethod) {
     Math.max(quantity - product.discountThreshold, 0) *
     product.basePrice *
     product.discountRate;
+  const price = applyShipping(basePrice, shippingMethod, quantity, discount);
+  return price;
+}
+
+function applyShipping(basePrice, shippingMethod, quantity, discount) {
+  // <- 두 번째 단계를 처리하는 함수
   const shippingPerCase =
     basePrice > shippingMethod.discountThreshold
       ? shippingMethod.discountedFee
