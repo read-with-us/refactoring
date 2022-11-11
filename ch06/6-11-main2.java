@@ -14,12 +14,10 @@ public static void main(String[] args) {
 static void run(String[] args) throws IOException {
   if (args.length == 0) throw new RuntimeException("파일명을 입력하세요.");
   CommandLine commandLine = new CommandLine();
-  return countOrders(commandLine, args, filename(args));
+  return countOrders(commandLine, args, commandLine.filename());
 }
 
-private static String filename(String[] args) {
-  return args[args.length - 1];
-}
+private static 
 
 private static long countOrders(CommandLine commandLine, String[] args, String filename) throws IOException {
   File input = Paths.get(filename).toFile();
@@ -36,5 +34,9 @@ private class CommandLine {
 
   public CommandLine(String[] args) {
     this.args = args;
+  }
+
+  String filename() {
+    return args[args.length - 1];
   }
 }
