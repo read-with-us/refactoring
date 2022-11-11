@@ -26,8 +26,8 @@ class NumberRange {
   }
 }
 
-function readingsOutsideRange(station, min, max, range) {
-  return station.readings.filter((r) => r.temp < min || r.temp > max);
+function readingsOutsideRange(station, min, range) {
+  return station.readings.filter((r) => r.temp < min || r.temp > range.max);
 }
 
 /**
@@ -48,11 +48,6 @@ const range = new NumberRange(
   operatingPlan.temperatureCeil
 );
 
-alerts = readingsOutsideRange(
-  station,
-  operatingPlan.temperatureFloor,
-  operatingPlan.temperatureCeil,
-  range
-);
+alerts = readingsOutsideRange(station, operatingPlan.temperatureFloor, range);
 
 console.log(alerts);
