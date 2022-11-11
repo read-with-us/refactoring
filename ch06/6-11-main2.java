@@ -28,4 +28,10 @@ private static long countOrders(CommandLine commandLine, String[] args, String f
     return orders.length;
 }
 
-private static class CommandLine {}
+private class CommandLine {
+  String[] args;
+
+  public CommandLine(String[] args) {
+    this.args = args;
+  }
+}
