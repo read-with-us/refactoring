@@ -43,11 +43,16 @@ const operatingPlan = {
  * 예시 호출
  */
 
+const range = new NumberRange(
+  operatingPlan.temperatureFloor,
+  operatingPlan.temperatureCeil
+);
+
 alerts = readingsOutsideRange(
   station,
   operatingPlan.temperatureFloor,
   operatingPlan.temperatureCeil,
-  null
+  range
 );
 
 console.log(alerts);
