@@ -4,7 +4,7 @@
 
 public static void main(String[] args) {
   try {
-    run(args);
+    System.out.println(run(args));
   } catch (Exception e) {
     System.err.println(e);
     System.exit(1);
@@ -18,9 +18,7 @@ static void run(String[] args) throws IOException {
   ObjectMapper mapper = new ObjectMapper();
   Order[] orders = mapper.readValue(input, Order[].class);
   if(Stream.of(args).anyMatch(arg -> "-r".equals(arg)))
-    System.out.println(Stream.of(orders)
-                              .filter(o -> "ready".equals(o.status))
-                              .count());
+    return Stream.of(orders).filter(o -> "ready".equals(o.status)).count();
   else
-    System.out.println(orders.length);
+    return orders.length;
 }
