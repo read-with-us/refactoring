@@ -1,8 +1,15 @@
+import _ from 'lodash';
+
 /**
  * p209 예시
  */
 
 const reading = { customer: 'ivan', quantity: 10, month: 5, year: 2017 };
+
+function enrichReading(original) {
+  const result = _.cloneDeep(original);
+  return result;
+}
 
 /**
  * 예시 실행을 위한 임의의 코드
