@@ -68,10 +68,11 @@ console.log(baseCharge);
 
 const rawReading2 = acquireReading();
 const aReading2 = new Reading(rawReading2);
-const taxableCharge = Math.max(
-  0,
-  aReading2.baseCharge - taxThreshold(aReading2.year)
-);
+const taxableCharge = taxableChargeFn(aReading2);
+
+function taxableChargeFn(aReading) {
+  return Math.max(0, aReading.baseCharge - taxThreshold(aReading.year));
+}
 
 console.log(taxableCharge);
 
