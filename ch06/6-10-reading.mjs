@@ -52,9 +52,12 @@ console.log(baseCharge);
  * 예시 호출 (2)
  */
 
-const aReading2 = acquireReading();
-const base = baseRate(aReading2.month, aReading2.year) * aReading.quantity;
-const taxableCharge = Math.max(0, base - taxThreshold(aReading2.year));
+const rawReading2 = acquireReading();
+const aReading2 = enrichReading(rawReading2);
+const taxableCharge = Math.max(
+  0,
+  aReading2.baseCharge - taxThreshold(aReading2.year)
+);
 
 console.log(taxableCharge);
 
