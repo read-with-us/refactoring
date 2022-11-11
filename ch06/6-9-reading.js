@@ -71,7 +71,8 @@ console.log(taxableCharge);
  * 예시 호출 (3)
  */
 
-const aReading3 = acquireReading();
+const rawReading3 = acquireReading();
+const aReading3 = new Reading(rawReading3);
 const basicChargeAmount = calculateBaseCharge(aReading3);
 
 function calculateBaseCharge(aReading) {
