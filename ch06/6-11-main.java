@@ -22,11 +22,13 @@ private static long countOrders(CommandLine commandLine, String[] args, String f
   File input = Paths.get(filename).toFile();
   ObjectMapper mapper = new ObjectMapper();
   Order[] orders = mapper.readValue(input, Order[].class);
-  boolean onlyCountReady = Stream.of(args).anyMatch(arg -> "-r".equals(arg));
-  if(onlyCountReady)
+  commandLine.onlyCountReady = Stream.of(args).anyMatch(arg -> "-r".equals(arg));
+  if(commandLine.onlyCountReady)
     return Stream.of(orders).filter(o -> "ready".equals(o.status)).count();
   else
     return orders.length;
 }
 
-private static class CommandLine {}
+private static class CommandLine {
+  boolean onlyCountReady;
+}
