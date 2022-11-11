@@ -56,8 +56,9 @@ console.log(taxableCharge);
  * 예시 호출 (3)
  */
 
-const aReading3 = acquireReading();
-const basicChargeAmount = calculateBaseCharge(aReading3); // <- 다른 곳에서 이미 함수로 만들어둠
+const rawReading3 = acquireReading(); // <- 미가공 측정값
+const aReading3 = enrichReading(rawReading3);
+const basicChargeAmount = calculateBaseCharge(aReading3);
 
 function calculateBaseCharge(aReading) {
   return baseRate(aReading.month, aReading.year) * aReading.quantity;
