@@ -8,18 +8,18 @@ function priceOrder(product, quantity, shippingMethod) {
     Math.max(quantity - product.discountThreshold, 0) *
     product.basePrice *
     product.discountRate;
-  const priceData = { basePrice, quantity };
-  const price = applyShipping(priceData, shippingMethod, discount);
+  const priceData = { basePrice, quantity, discount };
+  const price = applyShipping(priceData, shippingMethod);
   return price;
 }
 
-function applyShipping(priceData, shippingMethod, discount) {
+function applyShipping(priceData, shippingMethod) {
   const shippingPerCase =
     priceData.basePrice > shippingMethod.discountThreshold
       ? shippingMethod.discountedFee
       : shippingMethod.feePerCase;
   const shippingCost = priceData.quantity * shippingPerCase;
-  const price = priceData.basePrice - discount + shippingCost;
+  const price = priceData.basePrice - priceData.discount + shippingCost;
   return price;
 }
 
