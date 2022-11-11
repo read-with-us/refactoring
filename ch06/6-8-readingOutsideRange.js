@@ -24,12 +24,14 @@ class NumberRange {
   get max() {
     return this._data.max;
   }
+
+  contains(arg) {
+    return arg >= this.min && arg <= this.max;
+  }
 }
 
 function readingsOutsideRange(station, range) {
-  return station.readings.filter(
-    (r) => r.temp < range.min || r.temp > range.max
-  );
+  return station.readings.filter((r) => !range.contains(r.temp));
 }
 
 /**
