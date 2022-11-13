@@ -27,13 +27,13 @@
 - 스터디 멤버: [@yisu-kim](https://github.com/yisu-kim), [@sukyoungshin](https://github.com/sukyoungshin), [@wonjin-dev](https://github.com/wonjin-dev),
   [@okyungjin](https://github.com/okyungjin), [@startdata](https://github.com/startdata), [@Yummy-sk](https://github.com/Yummy-sk), [@Hyesooo](https://github.com/Hyesooo)
 
-| 회차 | 목차                                                                  | 날짜            | ✅  |
-| ---- | --------------------------------------------------------------------- | --------------- | --- |
+| 회차 | 목차                                                                  | 날짜            | ✅  | 예시 코드                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---- | --------------------------------------------------------------------- | --------------- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1    | [2장 리팩터링 원칙](ch02/리팩터링_원칙.md)                            | 2022/10/29 (토) | ✅  |
 | 2    | [3장 코드에서 나는 악취](ch03/코드에서_나는_악취.md)                  | 2022/11/05 (토) | ✅  |
 | 3    | [4장 테스트 구축](ch04/테스트_구축.md)                                | 2022/11/06 (일) | ✅  |
-| 4    | [6장 기본적인 리팩터링 (1)](<ch06/기본적인_리팩터링_(1).md>)          | 2022/11/12 (토) |     |
-| 5    | [6장 기본적인 리팩터링 (2)](<ch06/기본적인_리팩터링_(2).md>)          | 2022/11/13 (일) |     |
+| 4    | [6장 기본적인 리팩터링 (1)](<ch06/기본적인_리팩터링_(1).md>)          | 2022/11/12 (토) | ✅  | [6-1-printOwing](ch06/6-1-printOwing.js)<br/>[6-2-rating](ch06/6-2-rating.js)<br/> [6-2-reportLines](ch06/6-2-reportLines.js)<br/>[6-3-price](ch06/6-3-price.js)<br/>[6-5-circum](ch06/6-5-circum.js)<br/>[6-5-circum2](ch06/6-5-circum2.js)<br/>[6-5-addReservation](ch06/6-5-addReservation.js)<br/>[6-5-inNewEngland](ch06/6-5-inNewEngland.js)<br/>[6-6-defaultOwner](ch06/6-6-defaultOwner.mjs)<br/>[6-7-tpHd](ch06/6-7-tpHd.js) |
+| 5    | [6장 기본적인 리팩터링 (2)](<ch06/기본적인_리팩터링_(2).md>)          | 2022/11/13 (일) | ✅  | [6-8-readingOutsideRange](ch06/6-8-readingOutsideRange.js)<br/>[6-9-reading](ch06/6-9-reading.js)<br/>[6-10-reading](ch06/6-10-reading.mjs)<br/>[6-11-priceOrder](ch06/6-11-priceOrder.js)<br/>[6-11-main](ch06/6-11-main.java)<br/>[6-11-main2](ch06/6-11-main2.java)                                                                                                                                                                |
 | 6    | [7장 캡슐화](ch07/캡슐화.md)                                          | 2022/11/19 (토) |     |
 | 7    | [8장 기능 이동](ch08/기능_이동.md)                                    | 2022/11/20 (일) |     |
 | 8    | [9장 데이터 조직화](ch09/데이터_조직화.md)                            | 2022/11/26 (토) |     |
@@ -44,6 +44,14 @@
 | 13   | [12장 상속 다루기 (2)](<ch12/상속_다루기_(2).md>)                     | 2022/12/11 (일) |     |
 | 14   | [1장 리팩터링: 첫 번째 예시 (1)](<ch01/리팩터링_첫_번째_예시_(1).md>) | 2022/12/17 (토) |     |
 | 15   | [1장 리팩터링: 첫 번째 예시 (2)](<ch01/리팩터링_첫_번째_예시_(2).md>) | 2022/12/18 (일) |     |
+
+## 예시 코드
+
+이 프로젝트에는 6장부터 책의 예시 코드가 포함되어 있습니다.
+
+각 파일의 커밋 히스토리를 앞뒤로 이동해가며 리팩터링 과정을 단계별로 확인할 수 있습니다.
+
+또한 js 파일의 경우 실행이 가능하도록 임의의 데이터나 함수가 추가되어 있으며 node를 이용해 실행 결과를 확인하실 수 있습니다.
 
 ## 진행 방법
 
@@ -84,3 +92,8 @@
 - [『리팩터링 2판』 정오표 - Google Docs](https://docs.google.com/document/d/1IP04YcBgwOfBexV1CPK3gLCr2gmQdPTas2pHcqPuCz4/edit)
 - [리팩터링 이름 비교 & IDE들이 제공하는 리팩터링 목록\_『리팩터링, 2판』(개앞맵시/남기혁 옮김, 한빛미디어, 2020) - Google Sheets](https://docs.google.com/spreadsheets/d/1nFx-PjZ9Qs3QBZFzaMo6MSUSrWjSsO-iz5kpBtlVRPQ/edit#gid=866204681)
 - [Refactoring source code in Visual Studio Code](https://code.visualstudio.com/docs/editor/refactoring)
+- [FE재남: 리팩터링 스터디 - YouTube Playlist](https://www.youtube.com/playlist?list=PLjQV3hketAJmyZmqXZ1OVEFNctalbf9SX)
+
+## 참여 방법
+
+프로젝트에 참여하기 전 [CONTRIBUTING](CONTRIBUTING.md) 문서를 읽어주세요.
