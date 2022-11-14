@@ -21,6 +21,10 @@
 >
 > 책을 읽는 것에 그치지 않고 한 번이라도 본인이 작성하는 코드에서 악취가 나는 부분을 찾아 리팩터링해보고 경험을 공유하는 기회가 되었으면 합니다.
 
+## 참여 방법
+
+프로젝트에 참여하기 전 [CONTRIBUTING](CONTRIBUTING.md) 문서를 읽어주세요.
+
 ## 진행 상황
 
 - 기간: 10/29(토) ~ 12/18(일)
@@ -45,7 +49,7 @@
 | 14   | [1장 리팩터링: 첫 번째 예시 (1)](<ch01/리팩터링_첫_번째_예시_(1).md>) | 2022/12/17 (토) |     |
 | 15   | [1장 리팩터링: 첫 번째 예시 (2)](<ch01/리팩터링_첫_번째_예시_(2).md>) | 2022/12/18 (일) |     |
 
-## 예시 코드
+### 예시 코드
 
 이 프로젝트에는 6장부터 책의 예시 코드가 포함되어 있습니다.
 
@@ -93,7 +97,3 @@
 - [리팩터링 이름 비교 & IDE들이 제공하는 리팩터링 목록\_『리팩터링, 2판』(개앞맵시/남기혁 옮김, 한빛미디어, 2020) - Google Sheets](https://docs.google.com/spreadsheets/d/1nFx-PjZ9Qs3QBZFzaMo6MSUSrWjSsO-iz5kpBtlVRPQ/edit#gid=866204681)
 - [Refactoring source code in Visual Studio Code](https://code.visualstudio.com/docs/editor/refactoring)
 - [FE재남: 리팩터링 스터디 - YouTube Playlist](https://www.youtube.com/playlist?list=PLjQV3hketAJmyZmqXZ1OVEFNctalbf9SX)
-
-## 참여 방법
-
-프로젝트에 참여하기 전 [CONTRIBUTING](CONTRIBUTING.md) 문서를 읽어주세요.
