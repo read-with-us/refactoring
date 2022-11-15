@@ -2,7 +2,18 @@
  * p240 예시
  */
 
-const customerData = {
+class CustomerData {
+  #data;
+  constructor(data) {
+    this.#data = data;
+  }
+
+  get data() {
+    return this.#data;
+  }
+}
+
+const customerData = new CustomerData({
   1920: {
     name: '마틴 파울러',
     id: '1920',
@@ -21,14 +32,18 @@ const customerData = {
     name: '닐 포드',
     id: '38673',
   },
-};
+});
 
-function getRawDataOfCustomers() {
+function getCustomerData() {
   return customerData;
 }
 
+function getRawDataOfCustomers() {
+  return customerData.data;
+}
+
 function setRawDataOfCustomers(arg) {
-  customerData = arg;
+  customerData = new CustomerData(arg);
 }
 
 /**
