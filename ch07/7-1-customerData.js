@@ -11,6 +11,10 @@ class CustomerData {
   get data() {
     return this.#data;
   }
+
+  setUsage(customerID, year, month, amount) {
+    this.#data[customerID].usages[year][month] = amount;
+  }
 }
 
 const customerData = new CustomerData({
@@ -46,10 +50,6 @@ function setRawDataOfCustomers(arg) {
   customerData = new CustomerData(arg);
 }
 
-function setUsage(customerID, year, month, amount) {
-  getRawDataOfCustomers()[customerID].usages[year][month] = amount;
-}
-
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -63,7 +63,7 @@ const amount = 100;
  * 예시 코드 사용
  */
 
-setUsage(customerID, year, month, amount);
+getCustomerData().setUsage(customerID, year, month, amount);
 
 function compareUsage(customerID, laterYear, month) {
   const later = getRawDataOfCustomers()[customerID].usages[laterYear][month];
