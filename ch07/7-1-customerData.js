@@ -10,10 +10,6 @@ class CustomerData {
     this.#data = data;
   }
 
-  get data() {
-    return this.#data;
-  }
-
   get rawData() {
     return _.cloneDeep(this.#data);
   }
@@ -46,14 +42,6 @@ const customerData = new CustomerData({
 
 function getCustomerData() {
   return customerData;
-}
-
-function getRawDataOfCustomers() {
-  return customerData.rawData;
-}
-
-function setRawDataOfCustomers(arg) {
-  customerData = new CustomerData(arg);
 }
 
 /**
