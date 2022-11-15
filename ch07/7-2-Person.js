@@ -14,10 +14,10 @@ class Person {
     return this.#name;
   }
   get courses() {
-    return this.#courses;
+    return this.#courses.slice();
   }
   set courses(aList) {
-    this.#courses = aList;
+    this.#courses = aList.slice();
   }
   addCourse(aCourse) {
     this.#courses.push(aCourse);
