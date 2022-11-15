@@ -2,9 +2,27 @@
  * p238 예시
  */
 
-const organization = { name: '애크미 구스베리', country: 'GB' };
+class Organization {
+  #data;
+  constructor(data) {
+    this.#data = data;
+  }
+
+  get data() {
+    return this.#data;
+  }
+}
+
+const organization = new Organization({
+  name: '애크미 구스베리',
+  country: 'GB',
+});
 
 function getRawDataOfOrganization() {
+  return organization.data;
+}
+
+function getOrganization() {
   return organization;
 }
 
