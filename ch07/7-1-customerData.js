@@ -14,16 +14,22 @@ const customerData = {
       2015: {
         1: 70,
         2: 63,
-        // <- 나머지 달(month)은 생략
       },
     },
   },
   38673: {
     name: '닐 포드',
     id: '38673',
-    // <- 다른 고객 정보도 같은 형식으로 저장된다.
   },
 };
+
+function getRawDataOfCustomers() {
+  return customerData;
+}
+
+function setRawDataOfCustomers(arg) {
+  customerData = arg;
+}
 
 /**
  * 예시 실행을 위한 임의의 코드
@@ -38,13 +44,14 @@ const amount = 100;
  * 예시 코드 사용
  */
 
-customerData[customerID].usages[year][month] = amount;
+getRawDataOfCustomers()[customerID].usages[year][month] = amount;
 
 function compareUsage(customerID, laterYear, month) {
-  const later = customerData[customerID].usages[laterYear][month];
-  const earlier = customerData[customerID].usages[laterYear - 1][month];
+  const later = getRawDataOfCustomers()[customerID].usages[laterYear][month];
+  const earlier =
+    getRawDataOfCustomers()[customerID].usages[laterYear - 1][month];
   return { laterAmount: later, change: later - earlier };
 }
 
-console.log(JSON.stringify(customerData));
+console.log(JSON.stringify(getRawDataOfCustomers()));
 console.log(compareUsage(customerID, year, month));
