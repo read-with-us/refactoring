@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 /**
  * p240 예시
  */
@@ -12,8 +14,8 @@ class CustomerData {
     return this.#data;
   }
 
-  usage(customerID, year, month) {
-    return this.#data[customerID].usages[year][month];
+  get rawData() {
+    return _.cloneDeep(this.#data);
   }
 
   setUsage(customerID, year, month, amount) {
@@ -47,7 +49,7 @@ function getCustomerData() {
 }
 
 function getRawDataOfCustomers() {
-  return customerData.data;
+  return customerData.rawData;
 }
 
 function setRawDataOfCustomers(arg) {
@@ -70,10 +72,11 @@ const amount = 100;
 getCustomerData().setUsage(customerID, year, month, amount);
 
 function compareUsage(customerID, laterYear, month) {
-  const later = getCustomerData().usage(customerID, laterYear, month);
-  const earlier = getCustomerData().usage(customerID, laterYear - 1, month);
+  const later = getCustomerData().rawData[customerID].usages[laterYear][month];
+  const earlier =
+    getCustomerData().rawData[customerID].usages[laterYear - 1][month];
   return { laterAmount: later, change: later - earlier };
 }
 
-console.log(JSON.stringify(getRawDataOfCustomers()));
+console.log(JSON.stringify(getCustomerData().rawData));
 console.log(compareUsage(customerID, year, month));
