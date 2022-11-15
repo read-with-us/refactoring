@@ -71,7 +71,7 @@ function readBasicCourseNames(filename) {
 const aPerson = new Person('kim');
 const numAdvancedCourses = aPerson.courses.filter((c) => c.isAdvanced).length;
 for (const name of readBasicCourseNames(filename)) {
-  aPerson.courses.push(new Course(name, false));
+  aPerson.addCourse(new Course(name, false));
 }
 
 console.log(aPerson.name);
