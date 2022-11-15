@@ -19,6 +19,19 @@ class Person {
   set courses(aList) {
     this.#courses = aList;
   }
+  addCourse(aCourse) {
+    this.#courses.push(aCourse);
+  }
+  removeCourse(
+    aCourse,
+    fnIfAbsent = () => {
+      throw new RangeError();
+    }
+  ) {
+    const index = this.#courses.indexOf(aCourse);
+    if (index === -1) fnIfAbsent();
+    else this.#courses.splice(index, 1);
+  }
 }
 
 class Course {
