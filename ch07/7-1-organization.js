@@ -12,6 +12,14 @@ class Organization {
     return this.#data;
   }
 
+  get name() {
+    return this.#data.name;
+  }
+
+  get country() {
+    return this.#data.country;
+  }
+
   set name(aString) {
     this.#data.name = aString;
   }
@@ -44,11 +52,8 @@ let result = '';
  * 예시 코드 사용
  */
 
-result += `<h1>${getRawDataOfOrganization().name}</h1>`;
+result += `<h1>${getOrganization().name}</h1>`;
 getOrganization().name = 'newName';
 
 console.log(result);
-console.log(
-  getRawDataOfOrganization().name,
-  getRawDataOfOrganization().country
-);
+console.log(getOrganization().name, getOrganization().country);
