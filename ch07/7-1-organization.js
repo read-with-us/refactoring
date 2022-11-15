@@ -3,29 +3,27 @@
  */
 
 class Organization {
-  #data;
+  #name;
+  #country;
   constructor(data) {
-    this.#data = data;
-  }
-
-  get data() {
-    return this.#data;
+    this.#name = data.name;
+    this.#country = data.country;
   }
 
   get name() {
-    return this.#data.name;
+    return this.#name;
   }
 
   get country() {
-    return this.#data.country;
+    return this.#country;
   }
 
   set name(aString) {
-    this.#data.name = aString;
+    this.#name = aString;
   }
 
   set country(aCountryCode) {
-    this.#data.country = aCountryCode;
+    this.#country = aCountryCode;
   }
 }
 
