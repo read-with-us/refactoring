@@ -11,6 +11,14 @@ class Organization {
   get data() {
     return this.#data;
   }
+
+  set name(aString) {
+    this.#data.name = aString;
+  }
+
+  set country(aCountryCode) {
+    this.#data.country = aCountryCode;
+  }
 }
 
 const organization = new Organization({
@@ -37,7 +45,7 @@ let result = '';
  */
 
 result += `<h1>${getRawDataOfOrganization().name}</h1>`;
-getRawDataOfOrganization().name = 'newName';
+getOrganization().name = 'newName';
 
 console.log(result);
 console.log(
