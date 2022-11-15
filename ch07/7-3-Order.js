@@ -16,6 +16,17 @@ class Order {
   }
 }
 
+class Priority {
+  #value;
+  constructor(value) {
+    this.#value = value;
+  }
+
+  toString() {
+    return this.#value;
+  }
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
