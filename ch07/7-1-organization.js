@@ -34,10 +34,6 @@ const organization = new Organization({
   country: 'GB',
 });
 
-function getRawDataOfOrganization() {
-  return organization.data;
-}
-
 function getOrganization() {
   return organization;
 }
