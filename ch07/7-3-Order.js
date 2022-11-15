@@ -5,14 +5,14 @@
 class Order {
   #priority;
   constructor(data) {
-    this.#priority = data.priority;
+    this.#priority = new Priority(data.priority);
   }
 
-  get priority() {
-    return this.#priority;
+  get priorityString() {
+    return this.#priority.toString();
   }
   set priority(aString) {
-    this.#priority = aString;
+    this.#priority = new Priority(aString);
   }
 }
 
@@ -44,10 +44,10 @@ let highPriorityCount = 0;
  */
 
 highPriorityCount = orders.filter(
-  (o) => 'high' === o.priority || 'rush' === o.priority
+  (o) => 'high' === o.priorityString || 'rush' === o.priorityString
 ).length;
 
 for (const order of orders) {
-  console.log(order.priority);
+  console.log(order.priorityString);
 }
 console.log(highPriorityCount);
