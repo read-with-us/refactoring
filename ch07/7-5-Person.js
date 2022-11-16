@@ -29,7 +29,7 @@ class Person {
     this.#telephoneNumber.number = arg;
   }
   get telephoneNumber() {
-    return this.#telephoneNumber.telephoneNumber;
+    return this.#telephoneNumber.toString();
   }
 }
 
@@ -52,7 +52,7 @@ class TelephoneNumber {
   set number(arg) {
     this.#number = arg;
   }
-  get telephoneNumber() {
+  toString() {
     return `${this.areaCode} ${this.number}`;
   }
 }
