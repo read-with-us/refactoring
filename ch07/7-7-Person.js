@@ -13,12 +13,6 @@ class Person {
   get name() {
     return this.#name;
   }
-  get department() {
-    return this.#department;
-  }
-  set department(arg) {
-    this.#department = arg;
-  }
   get manager() {
     return this.#department.manager;
   }
