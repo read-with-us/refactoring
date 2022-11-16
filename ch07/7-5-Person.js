@@ -4,12 +4,10 @@
 
 class Person {
   #name;
-  #officeNumber;
   #telephoneNumber;
   constructor(name, officeAreaCode, officeNumber) {
     this.#name = name;
-    this.#officeNumber = officeNumber;
-    this.#telephoneNumber = new TelephoneNumber(officeAreaCode);
+    this.#telephoneNumber = new TelephoneNumber(officeAreaCode, officeNumber);
   }
 
   get name() {
@@ -25,10 +23,10 @@ class Person {
     this.#telephoneNumber.officeAreaCode = arg;
   }
   get officeNumber() {
-    return this.#officeNumber;
+    return this.#telephoneNumber.officeNumber;
   }
   set officeNumber(arg) {
-    this.#officeNumber = arg;
+    this.#telephoneNumber.officeNumber = arg;
   }
   get telephoneNumber() {
     return `${this.officeAreaCode} ${this.officeNumber}`;
@@ -37,14 +35,22 @@ class Person {
 
 class TelephoneNumber {
   #officeAreaCode;
-  constructor(officeAreaCode) {
+  #officeNumber;
+  constructor(officeAreaCode, officeNumber) {
     this.#officeAreaCode = officeAreaCode;
+    this.#officeNumber = officeNumber;
   }
   get officeAreaCode() {
     return this.#officeAreaCode;
   }
   set officeAreaCode(arg) {
     this.#officeAreaCode = arg;
+  }
+  get officeNumber() {
+    return this.#officeNumber;
+  }
+  set officeNumber(arg) {
+    this.#officeNumber = arg;
   }
 }
 
