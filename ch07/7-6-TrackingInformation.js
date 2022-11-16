@@ -2,31 +2,6 @@
  * p265 예시
  */
 
-class TrackingInformation {
-  #shippingCompany;
-  #trackingNumber;
-  constructor(shippingCompany, trackingNumber) {
-    this.#shippingCompany = shippingCompany;
-    this.#trackingNumber = trackingNumber;
-  }
-
-  get shippingCompany() {
-    return this.#shippingCompany;
-  }
-  set shippingCompany(arg) {
-    this.#shippingCompany = arg;
-  }
-  get trackingNumber() {
-    return this.#trackingNumber;
-  }
-  set trackingNumber(arg) {
-    this.#trackingNumber = arg;
-  }
-  get display() {
-    return `${this.shippingCompany}: ${this.trackingNumber}`;
-  }
-}
-
 class Shipment {
   #shippingCompany;
   #trackingNumber;
