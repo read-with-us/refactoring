@@ -6,10 +6,12 @@ class Person {
   #name;
   #officeAreaCode;
   #officeNumber;
+  #telephoneNumber;
   constructor(name, officeAreaCode, officeNumber) {
     this.#name = name;
     this.#officeAreaCode = officeAreaCode;
     this.#officeNumber = officeNumber;
+    this.#telephoneNumber = new TelephoneNumber();
   }
 
   get name() {
