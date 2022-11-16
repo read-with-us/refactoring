@@ -22,6 +22,9 @@ class Person {
   get manager() {
     return this.#department.manager;
   }
+  get chargeCode() {
+    return this.#department.chargeCode;
+  }
 }
 
 class Department {
@@ -55,4 +58,4 @@ const chargeCode = 'AA';
 const manager = '레베카 파슨스';
 const person = new Person(name, new Department(chargeCode, manager));
 
-console.log(person.name, person.department.chargeCode, person.manager);
+console.log(person.name, person.chargeCode, person.manager);
