@@ -28,35 +28,27 @@ class TrackingInformation {
 }
 
 class Shipment {
-  #trackingInformation;
   #shippingCompany;
   #trackingNumber;
-  constructor(trackingInformation) {
-    this.#trackingInformation = trackingInformation;
-    this.#shippingCompany = trackingInformation.shippingCompany;
-    this.#trackingNumber = trackingInformation.trackingNumber;
+  constructor(shippingCompany, trackingNumber) {
+    this.#shippingCompany = shippingCompany;
+    this.#trackingNumber = trackingNumber;
   }
 
   get trackingInfo() {
     return `${this.shippingCompany}: ${this.trackingNumber}`;
   }
-  get trackingInformation() {
-    return this.#trackingInformation;
-  }
-  set trackingInformation(aTrackingInformation) {
-    this.#trackingInformation = aTrackingInformation;
-  }
   get shippingCompany() {
-    return this.#trackingInformation.shippingCompany;
+    return this.#shippingCompany;
   }
   set shippingCompany(arg) {
-    this.#trackingInformation.shippingCompany = arg;
+    this.#shippingCompany = arg;
   }
   get trackingNumber() {
-    return this.#trackingInformation.trackingNumber;
+    return this.#trackingNumber;
   }
   set trackingNumber(arg) {
-    this.#trackingInformation.trackingNumber = arg;
+    this.#trackingNumber = arg;
   }
 }
 
@@ -66,9 +58,7 @@ class Shipment {
 
 const shippingCompany = '배송회사';
 const trackingNumber = 1452;
-const aShipment = new Shipment(
-  new TrackingInformation(shippingCompany, trackingNumber)
-);
+const aShipment = new Shipment(shippingCompany, trackingNumber);
 
 const request = {
   vendor: '벤더사',
