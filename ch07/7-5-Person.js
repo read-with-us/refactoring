@@ -35,6 +35,8 @@ class Person {
   }
 }
 
+class TelephoneNumber {}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
