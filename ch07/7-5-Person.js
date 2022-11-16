@@ -29,7 +29,7 @@ class Person {
     this.#telephoneNumber.officeNumber = arg;
   }
   get telephoneNumber() {
-    return `${this.officeAreaCode} ${this.officeNumber}`;
+    return this.#telephoneNumber.telephoneNumber;
   }
 }
 
@@ -51,6 +51,9 @@ class TelephoneNumber {
   }
   set officeNumber(arg) {
     this.#officeNumber = arg;
+  }
+  get telephoneNumber() {
+    return `${this.officeAreaCode} ${this.officeNumber}`;
   }
 }
 
