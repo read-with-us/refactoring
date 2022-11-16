@@ -4,6 +4,7 @@
   "repository": "https://github.com/read-with-us/refactoring.git",
   "author": "yisu-kim <yisu.kim.dev@outlook.com>",
   "license": "MIT",
+  "type": "module",
   "dependencies": {
     "lodash": "^4.17.21"
   }
