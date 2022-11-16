@@ -42,6 +42,9 @@ class Shipment {
   set trackingInformation(aTrackingInformation) {
     this.#trackingInformation = aTrackingInformation;
   }
+  set shippingCompany(arg) {
+    this.#trackingInformation.shippingCompany = arg;
+  }
 }
 
 /**
@@ -62,6 +65,6 @@ const request = {
  * 예시 코드 사용
  */
 
-aShipment.trackingInformation.shippingCompany = request.vendor;
+aShipment.shippingCompany = request.vendor;
 
 console.log(aShipment.trackingInfo);
