@@ -16,12 +16,6 @@ class Person {
   get department() {
     return this.#department;
   }
-  get manager() {
-    return this.#department.manager;
-  }
-  get chargeCode() {
-    return this.#department.chargeCode;
-  }
 }
 
 class Department {
