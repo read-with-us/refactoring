@@ -19,6 +19,9 @@ class Person {
   set department(arg) {
     this.#department = arg;
   }
+  get manager() {
+    return this.#department.manager;
+  }
 }
 
 class Department {
@@ -52,8 +55,4 @@ const chargeCode = 'AA';
 const manager = '레베카 파슨스';
 const person = new Person(name, new Department(chargeCode, manager));
 
-console.log(
-  person.name,
-  person.department.chargeCode,
-  person.department.manager
-);
+console.log(person.name, person.department.chargeCode, person.manager);
