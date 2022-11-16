@@ -11,7 +11,7 @@ class Person {
     this.#name = name;
     this.#officeAreaCode = officeAreaCode;
     this.#officeNumber = officeNumber;
-    this.#telephoneNumber = new TelephoneNumber();
+    this.#telephoneNumber = new TelephoneNumber(officeAreaCode);
   }
 
   get name() {
@@ -37,7 +37,18 @@ class Person {
   }
 }
 
-class TelephoneNumber {}
+class TelephoneNumber {
+  #officeAreaCode;
+  constructor(officeAreaCode) {
+    this.#officeAreaCode = officeAreaCode;
+  }
+  get officeAreaCode() {
+    return this.#officeAreaCode;
+  }
+  set officeAreaCode(arg) {
+    this.#officeAreaCode = arg;
+  }
+}
 
 /**
  * 예시 실행을 위한 임의의 코드
