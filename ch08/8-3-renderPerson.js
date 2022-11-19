@@ -15,15 +15,12 @@ function photoDiv(p) {
   return ['<div>', zznew(p), '</div>'].join('\n');
 }
 
-function emitPhotoData(aPhoto) {
-  const result = [];
-  result.push(`<p>위치: ${aPhoto.location}</p>`);
-  result.push(`<p>날짜: ${aPhoto.date.toString()}</p>`);
-  return result.join('\n');
-}
-
 function zznew(p) {
-  return [`<p>제목: ${p.title}</p>`, emitPhotoData(p)].join('\n');
+  return [
+    `<p>제목: ${p.title}</p>`,
+    `<p>위치: ${p.location}</p>`,
+    `<p>날짜: ${p.date.toString()}</p>`,
+  ].join('\n');
 }
 
 /**
