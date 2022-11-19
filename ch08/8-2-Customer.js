@@ -8,19 +8,22 @@ class Customer {
   #contract;
   constructor(name, discountRate) {
     this.#name = name;
-    this.#discountRate = discountRate;
+    this.#setDiscountRate(discountRate);
     this.#contract = new CustomerContract(dateToday());
   }
 
   get discountRate() {
     return this.#discountRate;
   }
+  #setDiscountRate(aNumber) {
+    this.#discountRate = aNumber;
+  }
   becomePreferred() {
-    this.#discountRate += 0.03;
+    this.#setDiscountRate(this.discountRate + 0.03);
     // 다른 멋진 일들
   }
   applyDiscount(amount) {
-    return amount.subtract(amount.multiply(this.#discountRate));
+    return amount.subtract(amount.multiply(this.discountRate));
   }
 }
 
