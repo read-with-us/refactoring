@@ -1,3 +1,5 @@
+import assert from 'assert';
+
 /**
  * p294 예시
  */
@@ -9,6 +11,7 @@ class Account {
   constructor(number, type, interestRate) {
     this.#number = number;
     this.#type = type;
+    assert(interestRate === this.#type.interestRate);
     this.#interestRate = interestRate;
   }
 
