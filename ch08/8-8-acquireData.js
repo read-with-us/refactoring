@@ -5,11 +5,11 @@ import { readFileSync } from 'fs';
  */
 
 function acquireData(input) {
-  const lines = input.split('\n'); // <- 컬렉션
+  const lines = input.split('\n');
   let firstLine = true;
   const result = [];
-  // 반복문
-  for (const line of lines) {
+  const loopItems = lines;
+  for (const line of loopItems) {
     if (firstLine) {
       firstLine = false;
       continue;
