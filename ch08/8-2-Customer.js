@@ -4,19 +4,18 @@
 
 class Customer {
   #name;
-  #discountRate;
   #contract;
   constructor(name, discountRate) {
     this.#name = name;
-    this.#setDiscountRate(discountRate);
     this.#contract = new CustomerContract(dateToday());
+    this.#setDiscountRate(discountRate);
   }
 
   get discountRate() {
-    return this.#discountRate;
+    return this.#contract.discountRate;
   }
   #setDiscountRate(aNumber) {
-    this.#discountRate = aNumber;
+    this.#contract.discountRate = aNumber;
   }
   becomePreferred() {
     this.#setDiscountRate(this.discountRate + 0.03);
