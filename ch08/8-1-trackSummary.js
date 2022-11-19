@@ -13,7 +13,6 @@ function trackSummary(points) {
     pace: pace,
   };
 
-  // 총 거리 계산
   function calculateDistance() {
     let result = 0;
     for (let i = 1; i < points.length; i++) {
@@ -22,7 +21,6 @@ function trackSummary(points) {
     return result;
   }
 
-  // 두 지점의 거리 계산
   function distance(p1, p2) {
     // 하버사인 공식(haversine formula)은 다음 사이트를 참고하자.
     // http://www.movable-type.co.uk/scripts/latlong.html
@@ -38,18 +36,25 @@ function trackSummary(points) {
     return EARTH_RADIUS * c;
   }
 
-  // 라디안 값으로 변환
   function radians(degrees) {
     return (degrees * Math.PI) / 180;
   }
 
-  // 총 시간 계산
   function calculateTime() {
     /**
      * 예시 실행을 위한 임의의 코드
      */
     return 46800;
   }
+}
+
+function top_calculateDistance() {
+  // <- 최상위로 복사하면서 새로운 (임시) 이름을 지어줌
+  let result = 0;
+  for (let i = 1; i < points.length; i++) {
+    result += distance(points[i - 1], points[i]);
+  }
+  return result;
 }
 
 /**
