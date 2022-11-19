@@ -5,7 +5,8 @@
 function renderPerson(outStream, person) {
   outStream.write(`<p>${person.name}</p>\n`);
   renderPhoto(outStream, person.photo);
-  emitPhotoData(outStream, person.photo);
+  zztmp(outStream, person.photo);
+  outStream.write(`<p>위치: ${person.photo.location}</p>`); // <- 첫 번째 호출 위치로 인라인
 }
 
 function listRecentPhotos(outStream, photos) {
@@ -23,7 +24,6 @@ function emitPhotoData(outStream, photo) {
   outStream.write(`<p>위치: ${photo.location}</p>`);
 }
 
-// 이동하지 않을 코드
 function zztmp(outStream, photo) {
   outStream.write(`<p>제목: ${photo.title}</p>`);
   outStream.write(`<p>날짜: ${photo.date.toString()}</p>`);
