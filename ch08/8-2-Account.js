@@ -1,5 +1,3 @@
-import assert from 'assert';
-
 /**
  * p294 예시
  */
@@ -7,16 +5,13 @@ import assert from 'assert';
 class Account {
   #number;
   #type;
-  #interestRate;
-  constructor(number, type, interestRate) {
+  constructor(number, type) {
     this.#number = number;
     this.#type = type;
-    assert(interestRate === this.#type.interestRate);
-    this.#interestRate = interestRate;
   }
 
   get interestRate() {
-    return this.#interestRate;
+    return this.#type.interestRate;
   }
 }
 
@@ -40,6 +35,6 @@ class AccountType {
 const number = 'XXX-XX-XXXXXX';
 const type = new AccountType('Premium', 0.5);
 const interestRate = 0.5;
-const account = new Account(number, type, interestRate);
+const account = new Account(number, type);
 
 console.log(account.interestRate);
