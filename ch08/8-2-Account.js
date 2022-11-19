@@ -19,8 +19,14 @@ class Account {
 
 class AccountType {
   #name;
-  constructor(nameString) {
+  #interestRate;
+  constructor(nameString, interestRate) {
     this.#name = nameString;
+    this.#interestRate = interestRate;
+  }
+
+  get interestRate() {
+    return this.#interestRate;
   }
 }
 
@@ -29,7 +35,7 @@ class AccountType {
  */
 
 const number = 'XXX-XX-XXXXXX';
-const type = new AccountType('Premium');
+const type = new AccountType('Premium', 0.5);
 const interestRate = 0.5;
 const account = new Account(number, type, interestRate);
 
