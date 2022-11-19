@@ -6,7 +6,7 @@ function renderPerson(outStream, person) {
   outStream.write(`<p>${person.name}</p>\n`);
   renderPhoto(outStream, person.photo);
   zztmp(outStream, person.photo);
-  outStream.write(`<p>위치: ${person.photo.location}</p>`); // <- 첫 번째 호출 위치로 인라인
+  outStream.write(`<p>위치: ${person.photo.location}</p>`);
 }
 
 function listRecentPhotos(outStream, photos) {
@@ -14,7 +14,8 @@ function listRecentPhotos(outStream, photos) {
     .filter((p) => p.date > recentDateCutoff())
     .forEach((p) => {
       outStream.write('<div>\n');
-      emitPhotoData(outStream, p);
+      zztmp(outStream, p);
+      outStream.write(`<p>위치: ${p.location}</p>`); // <- 두 번째 호출 위치로 인라인
       outStream.write('</div>\n');
     });
 }
