@@ -48,8 +48,7 @@ function trackSummary(points) {
   }
 }
 
-function top_calculateDistance() {
-  // <- 최상위로 복사하면서 새로운 (임시) 이름을 지어줌
+function top_calculateDistance(points) {
   let result = 0;
   for (let i = 1; i < points.length; i++) {
     result += distance(points[i - 1], points[i]);
