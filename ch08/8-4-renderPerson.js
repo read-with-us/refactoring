@@ -15,14 +15,9 @@ function listRecentPhotos(outStream, photos) {
     .forEach((p) => {
       outStream.write('<div>\n');
       zztmp(outStream, p);
-      outStream.write(`<p>위치: ${p.location}</p>`); // <- 두 번째 호출 위치로 인라인
+      outStream.write(`<p>위치: ${p.location}</p>`);
       outStream.write('</div>\n');
     });
-}
-
-function emitPhotoData(outStream, photo) {
-  zztmp(outStream, photo);
-  outStream.write(`<p>위치: ${photo.location}</p>`);
 }
 
 function zztmp(outStream, photo) {
