@@ -95,6 +95,7 @@
 
 ## 유용한 리소스
 
+- [Refactoring - Martin Fowler](https://refactoring.com/)
 - [GitHub - WegraLee/Refactoring: 『리팩터링, 2판』(한빛미디어, 2020)](https://github.com/WegraLee/Refactoring)
 - [『리팩터링 2판』 정오표 - Google Docs](https://docs.google.com/document/d/1IP04YcBgwOfBexV1CPK3gLCr2gmQdPTas2pHcqPuCz4/edit)
 - [리팩터링 이름 비교 & IDE들이 제공하는 리팩터링 목록\_『리팩터링, 2판』(개앞맵시/남기혁 옮김, 한빛미디어, 2020) - Google Sheets](https://docs.google.com/spreadsheets/d/1nFx-PjZ9Qs3QBZFzaMo6MSUSrWjSsO-iz5kpBtlVRPQ/edit#gid=866204681)
