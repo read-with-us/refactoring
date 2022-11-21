@@ -1,5 +1,3 @@
-import assert from 'assert';
-
 /**
  * p341 예시
  */
@@ -15,9 +13,6 @@ class ProductionPlan {
   }
 
   get production() {
-    assert(
-      this.#productionAccumulator === this.calculatedProductionAccumulator
-    );
     return this.#initialProduction + this.#productionAccumulator;
   }
   get calculatedProductionAccumulator() {
