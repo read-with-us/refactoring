@@ -10,10 +10,10 @@ class Organization {
     this.#country = data.country;
   }
 
-  get name() {
+  get title() {
     return this.#title;
   }
-  set name(aString) {
+  set title(aString) {
     this.#title = aString;
   }
   get country() {
@@ -32,4 +32,4 @@ const organization = new Organization({
 /**
  * 예시 실행을 위한 임의의 코드
  */
-console.log(organization.name, organization.country);
+console.log(organization.title, organization.country);
