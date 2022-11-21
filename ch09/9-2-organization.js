@@ -6,7 +6,7 @@ class Organization {
   #title;
   #country;
   constructor(data) {
-    this.#title = data.title !== undefined ? data.title : data.name;
+    this.#title = data.title;
     this.#country = data.country;
   }
 
