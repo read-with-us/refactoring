@@ -3,19 +3,21 @@
  */
 
 class ProductionPlan {
-  #production;
+  #initialProduction;
+  #productionAccumulator;
   #adjustments;
   constructor(production) {
-    this.#production = production;
+    this.#initialProduction = production;
+    this.#productionAccumulator = 0;
     this.#adjustments = [];
   }
 
   get production() {
-    return this.#production;
+    return this.#initialProduction + this.#productionAccumulator;
   }
   applyAdjustment(anAdjustment) {
     this.#adjustments.push(anAdjustment);
-    this.#production += anAdjustment.amount;
+    this.#productionAccumulator += anAdjustment.amount;
   }
 }
 
