@@ -1,3 +1,5 @@
+import assert from 'assert';
+
 /**
  * p339 예시
  */
@@ -14,7 +16,11 @@ class ProductionPlan {
   }
 
   get production() {
+    assert(this.#production === this.calculatedProduction);
     return this.#production;
+  }
+  get calculatedProduction() {
+    return this.#adjustments.reduce((sum, a) => sum + a.amount, 0);
   }
   applyAdjustment(anAdjustment) {
     this.#adjustments.push(anAdjustment);
