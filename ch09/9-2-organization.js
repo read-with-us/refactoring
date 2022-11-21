@@ -6,7 +6,7 @@ class Organization {
   #title;
   #country;
   constructor(data) {
-    this.#title = data.name;
+    this.#title = data.title !== undefined ? data.title : data.name;
     this.#country = data.country;
   }
 
@@ -25,7 +25,7 @@ class Organization {
 }
 
 const organization = new Organization({
-  name: '애크미 구스베리',
+  title: '애크미 구스베리',
   country: 'GB',
 });
 
