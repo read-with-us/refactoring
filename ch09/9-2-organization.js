@@ -3,18 +3,18 @@
  */
 
 class Organization {
-  #name;
+  #title;
   #country;
   constructor(data) {
-    this.#name = data.name;
+    this.#title = data.name;
     this.#country = data.country;
   }
 
   get name() {
-    return this.#name;
+    return this.#title;
   }
   set name(aString) {
-    this.#name = aString;
+    this.#title = aString;
   }
   get country() {
     return this.#country;
