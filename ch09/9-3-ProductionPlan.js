@@ -1,5 +1,3 @@
-import assert from 'assert';
-
 /**
  * p339 예시
  */
@@ -16,7 +14,6 @@ class ProductionPlan {
   }
 
   get production() {
-    assert(this.#production === this.calculatedProduction);
     return this.#production;
   }
   get calculatedProduction() {
