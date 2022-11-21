@@ -4,23 +4,20 @@
 
 class ProductionPlan {
   #initialProduction;
-  #productionAccumulator;
   #adjustments;
   constructor(production) {
     this.#initialProduction = production;
-    this.#productionAccumulator = 0;
     this.#adjustments = [];
   }
 
   get production() {
-    return this.#initialProduction + this.#productionAccumulator;
+    return this.#initialProduction + this.calculatedProductionAccumulator;
   }
   get calculatedProductionAccumulator() {
     return this.#adjustments.reduce((sum, a) => sum + a.amount, 0);
   }
   applyAdjustment(anAdjustment) {
     this.#adjustments.push(anAdjustment);
-    this.#productionAccumulator += anAdjustment.amount;
   }
 }
 
