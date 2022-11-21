@@ -1,3 +1,5 @@
+import assert from 'assert';
+
 /**
  * p341 예시
  */
@@ -13,7 +15,13 @@ class ProductionPlan {
   }
 
   get production() {
+    assert(
+      this.#productionAccumulator === this.calculatedProductionAccumulator
+    );
     return this.#initialProduction + this.#productionAccumulator;
+  }
+  get calculatedProductionAccumulator() {
+    return this.#adjustments.reduce((sum, a) => sum + a.amount, 0);
   }
   applyAdjustment(anAdjustment) {
     this.#adjustments.push(anAdjustment);
@@ -31,5 +39,4 @@ const adjustment = {
   amount: 20,
 };
 productionPlan.applyAdjustment(adjustment);
-
 console.log(productionPlan.production);
