@@ -1,3 +1,5 @@
+import assert from 'assert';
+
 /**
  * p344 예시
  */
@@ -36,6 +38,10 @@ class TelephoneNumber {
   get number() {
     return this.#number;
   }
+  equals(other) {
+    if (!(other instanceof TelephoneNumber)) return false;
+    return this.areaCode === other.areaCode && this.number === other.number;
+  }
 }
 
 /**
@@ -49,3 +55,9 @@ person.officeAreaCode = officeAreaCode;
 person.officeNumber = officeNumber;
 
 console.log(person.officeAreaCode, person.officeNumber);
+
+assert(
+  new TelephoneNumber('312', '555-0142').equals(
+    new TelephoneNumber('312', '555-0142')
+  )
+);
