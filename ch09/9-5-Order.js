@@ -20,12 +20,14 @@ export function findCustomer(id) {
   return _repositoryData.customers.get(id);
 }
 
+initialize();
+
 class Order {
   #number;
   #customer;
   constructor(data) {
     this.#number = data.number;
-    this.#customer = new Customer(data.customer);
+    this.#customer = registerCustomer(data.customer);
     // 다른 데이터를 읽어 들인다.
   }
 
