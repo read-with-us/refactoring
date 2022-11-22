@@ -12,13 +12,13 @@ class Person {
     return this.#telephoneNumber.areaCode;
   }
   set officeAreaCode(arg) {
-    this.#telephoneNumber.areaCode = arg;
+    this.#telephoneNumber = new TelephoneNumber(arg, this.officeNumber);
   }
   get officeNumber() {
     return this.#telephoneNumber.number;
   }
   set officeNumber(arg) {
-    this.#telephoneNumber.number = arg;
+    this.#telephoneNumber = new TelephoneNumber(this.officeAreaCode, arg);
   }
 }
 
