@@ -2,12 +2,30 @@
  * p348 예시
  */
 
+let _repositoryData;
+
+export function initialize() {
+  _repositoryData = {};
+  _repositoryData.customers = new Map();
+}
+
+export function registerCustomer(id) {
+  if (!_repositoryData.customers.has(id)) {
+    _repositoryData.customers.set(id, new Customer(id));
+  }
+  return findCustomer(id);
+}
+
+export function findCustomer(id) {
+  return _repositoryData.customers.get(id);
+}
+
 class Order {
   #number;
   #customer;
   constructor(data) {
     this.#number = data.number;
-    this.#customer = new Customer(data.customer); // <- data.customer가 고객 ID임
+    this.#customer = new Customer(data.customer);
     // 다른 데이터를 읽어 들인다.
   }
 
