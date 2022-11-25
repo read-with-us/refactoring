@@ -7,7 +7,7 @@ function charge(quantity, plan) {
   if (summer()) {
     charge = summerCharge();
   } else {
-    charge = quantity * plan.regularRate + plan.regularServiceCharge;
+    charge = regularCharge();
   }
   return charge;
 
@@ -17,6 +17,10 @@ function charge(quantity, plan) {
 
   function summerCharge() {
     return quantity * plan.summerRate;
+  }
+
+  function regularCharge() {
+    return quantity * plan.regularRate + plan.regularServiceCharge;
   }
 }
 
