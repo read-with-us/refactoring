@@ -3,7 +3,6 @@
  */
 
 function payAmount(employee) {
-  let result;
   if (employee.isSeparated) {
     return { amount: 0, reasonCode: 'SEP' };
   }
@@ -11,8 +10,7 @@ function payAmount(employee) {
     return { amount: 0, reasonCode: 'RET' };
   }
   // 급여 계산 로직
-  result = someFinalComputation();
-  return result;
+  return someFinalComputation();
 }
 
 /**
