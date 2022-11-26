@@ -24,6 +24,7 @@ function enrichSite(inputSite) {
   const unknownCustomer = {
     isUnknown: true,
     name: '거주자',
+    billingPlan: registry.billingPlan.basic,
   };
 
   if (isUnknown(result.customer)) result.customer = unknownCustomer;
@@ -52,9 +53,7 @@ const aCustomer = site.customer;
 // ... 수많은 코드 ...
 const customerName = aCustomer.name;
 
-const plan = isUnknown(aCustomer)
-  ? registry.billingPlan.basic
-  : aCustomer.billingPlan;
+const plan = aCustomer.billingPlan;
 
 const weeksDelinquent = isUnknown(aCustomer)
   ? 0
