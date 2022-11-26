@@ -18,7 +18,7 @@ function checkForMiscreants() {
       }
       if (p === '사루만') {
         sendAlert();
-        found = true;
+        return;
       }
     }
   }
