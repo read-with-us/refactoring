@@ -41,6 +41,12 @@ class Rating {
     let result = 2;
     if (this.#voyage.zone === '중국') result += 1;
     if (this.#voyage.zone === '동인동') result += 1;
+    result += this.voyageAndHistoryLengthFactor;
+    return result;
+  }
+
+  get voyageAndHistoryLengthFactor() {
+    let result = 0;
     if (this.#voyage.zone === '중국' && this.hasChinaHistory) {
       result += 3;
       if (this.#history.length > 10) result += 1;
