@@ -9,7 +9,9 @@ class Site {
   }
 
   get customer() {
-    return this.#customer;
+    return this.#customer === '미확인 고객'
+      ? new UnknownCustomer()
+      : this.#customer;
   }
 }
 
@@ -48,10 +50,10 @@ class UnknownCustomer {
 }
 
 function isUnknown(arg) {
-  if (!(arg instanceof Customer || arg === '미확인 고객')) {
+  if (!(arg instanceof Customer || arg instanceof UnknownCustomer)) {
     throw new Error(`잘못된 값과 비교: <${arg}>`);
   }
-  return arg === '미확인 고객';
+  return arg.isUnknown;
 }
 
 /**
