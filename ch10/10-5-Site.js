@@ -47,6 +47,12 @@ class UnknownCustomer {
   get name() {
     return '거주자';
   }
+  get billingPlan() {
+    return registry.billingPlan.basic;
+  }
+  set billingPlan(arg) {
+    /* 무시한다. */
+  }
 
   get isUnknown() {
     return true;
@@ -83,11 +89,9 @@ const aCustomer = site.customer;
 // ... 수많은 코드 ...
 const customerName = aCustomer.name;
 
-const plan = isUnknown(aCustomer)
-  ? registry.billingPlan.basic
-  : aCustomer.billingPlan;
+const plan = aCustomer.billingPlan;
 
-if (!isUnknown(aCustomer)) aCustomer.billingPlan = newPlan;
+aCustomer.billingPlan = newPlan;
 
 const weeksDelinquent = isUnknown(aCustomer)
   ? 0
