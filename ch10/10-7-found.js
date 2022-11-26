@@ -4,6 +4,11 @@
 
 function found() {
   // 생략(중요하지 않은 코드)
+  checkForMiscreants();
+  // 생략
+}
+
+function checkForMiscreants() {
   let found = false;
   for (const p of people) {
     if (!found) {
@@ -17,7 +22,6 @@ function found() {
       }
     }
   }
-  // 생략
 }
 
 /**
