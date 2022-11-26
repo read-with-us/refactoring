@@ -9,7 +9,9 @@ class Site {
   }
 
   get customer() {
-    return this.#customer;
+    return this.#customer === '미확인 고객'
+      ? createUnknownCustomer()
+      : this.#customer;
   }
 }
 
@@ -48,7 +50,7 @@ function createUnknownCustomer() {
 }
 
 function isUnknown(arg) {
-  return arg === '미확인 고객';
+  return arg.isUnknown;
 }
 
 /**
