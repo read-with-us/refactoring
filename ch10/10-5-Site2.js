@@ -47,6 +47,10 @@ function createUnknownCustomer() {
   };
 }
 
+function isUnknown(arg) {
+  return arg === '미확인 고객';
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -67,17 +71,15 @@ const registry = {
 const aCustomer = site.customer;
 // ... 수많은 코드 ...
 let customerName;
-if (aCustomer === '미확인 고객') customerName = '거주자';
+if (isUnknown(aCustomer)) customerName = '거주자';
 else customerName = aCustomer.name;
 
-const plan =
-  aCustomer === '미확인 고객'
-    ? registry.billingPlan.basic
-    : aCustomer.billingPlan;
+const plan = isUnknown(aCustomer)
+  ? registry.billingPlan.basic
+  : aCustomer.billingPlan;
 
-const weeksDelinquent =
-  aCustomer === '미확인 고객'
-    ? 0
-    : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = isUnknown(aCustomer)
+  ? 0
+  : aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
 console.log(customerName, plan, weeksDelinquent);
