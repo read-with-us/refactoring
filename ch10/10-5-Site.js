@@ -35,6 +35,16 @@ class Customer {
   get paymentHistory() {
     return this.#paymentHistory;
   }
+
+  get isUnknown() {
+    return false;
+  }
+}
+
+class UnknownCustomer {
+  get isUnknown() {
+    return true;
+  }
 }
 
 /**
