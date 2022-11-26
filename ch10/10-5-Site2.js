@@ -44,14 +44,14 @@ class Customer {
 }
 
 function createUnknownCustomer() {
-  return {
+  return Object.freeze({
     isUnknown: true,
     name: '거주자',
     billingPlan: registry.billingPlan.basic,
     paymentHistory: {
       weeksDelinquentInLastYear: 0,
     },
-  };
+  });
 }
 
 function isUnknown(arg) {
