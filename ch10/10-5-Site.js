@@ -104,4 +104,8 @@ aCustomer.billingPlan = newPlan;
 
 const weeksDelinquent = aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
+// 튀는 클라이언트
+const name = !isUnknown(aCustomer) ? aCustomer.name : '미확인 거주자';
+
 console.log(customerName, plan, weeksDelinquent);
+console.log(name);
