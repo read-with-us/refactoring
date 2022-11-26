@@ -79,16 +79,14 @@ let customerName;
 if (isUnknown(aCustomer)) customerName = '거주자';
 else customerName = aCustomer.name;
 
-const plan =
-  aCustomer === '미확인 고객'
-    ? registry.billingPlan.basic
-    : aCustomer.billingPlan;
+const plan = isUnknown(aCustomer)
+  ? registry.billingPlan.basic
+  : aCustomer.billingPlan;
 
-if (aCustomer !== '미확인 고객') aCustomer.billingPlan = newPlan;
+if (!isUnknown(aCustomer)) aCustomer.billingPlan = newPlan;
 
-const weeksDelinquent =
-  aCustomer === '미확인 고객'
-    ? 0
-    : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = isUnknown(aCustomer)
+  ? 0
+  : aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
 console.log(customerName, plan, weeksDelinquent);
