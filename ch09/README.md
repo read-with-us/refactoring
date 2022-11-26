@@ -1,4 +1,4 @@
-[⬅️ 8장](../ch08/기능_이동.md) | [10장 ➡️](../ch10/조건부_로직_간소화.md)
+[⬅️ 8장](https://github.com/read-with-us/refactoring/tree/main/ch08) | [10장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch10)
 
 # 9장 데이터 조직화
 
@@ -132,4 +132,4 @@ p.352
 
 <br>
 
-[⬅️ 8장](../ch08/기능_이동.md) | [⬆️ 위로](#9장-데이터-조직화) | [10장 ➡️](../ch10/조건부_로직_간소화.md)
+[⬅️ 8장](https://github.com/read-with-us/refactoring/tree/main/ch08) | [⬆️ 위로](#9장-데이터-조직화) | [10장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch10)
