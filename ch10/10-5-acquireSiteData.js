@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 /**
  * p398 예시
  */
@@ -17,6 +19,10 @@ function acquireSiteData() {
   return siteData;
 }
 
+function enrichSite(inputSite) {
+  return _.cloneDeep(inputSite);
+}
+
 const registry = {
   billingPlan: {
     basic: 'basic',
@@ -27,7 +33,8 @@ const registry = {
  * 예시 코드 사용
  */
 
-const site = acquireSiteData();
+const rawSite = acquireSiteData();
+const site = enrichSite(rawSite);
 const aCustomer = site.customer;
 // ... 수많은 코드 ...
 let customerName;
