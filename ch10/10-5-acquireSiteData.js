@@ -23,6 +23,7 @@ function enrichSite(inputSite) {
   const result = _.cloneDeep(inputSite);
   const unknownCustomer = {
     isUnknown: true,
+    name: '거주자',
   };
 
   if (isUnknown(result.customer)) result.customer = unknownCustomer;
@@ -49,9 +50,7 @@ const rawSite = acquireSiteData();
 const site = enrichSite(rawSite);
 const aCustomer = site.customer;
 // ... 수많은 코드 ...
-let customerName;
-if (isUnknown(aCustomer)) customerName = '거주자';
-else customerName = aCustomer.name;
+const customerName = aCustomer.name;
 
 const plan = isUnknown(aCustomer)
   ? registry.billingPlan.basic
