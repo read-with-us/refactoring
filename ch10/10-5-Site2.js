@@ -46,6 +46,7 @@ class Customer {
 function createUnknownCustomer() {
   return {
     isUnknown: true,
+    name: '거주자',
   };
 }
 
@@ -72,9 +73,7 @@ const registry = {
 
 const aCustomer = site.customer;
 // ... 수많은 코드 ...
-let customerName;
-if (isUnknown(aCustomer)) customerName = '거주자';
-else customerName = aCustomer.name;
+const customerName = aCustomer.name;
 
 const plan = isUnknown(aCustomer)
   ? registry.billingPlan.basic
