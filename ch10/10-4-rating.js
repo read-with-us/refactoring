@@ -59,6 +59,8 @@ class Rating {
   }
 }
 
+class ExperiencedChinaRating extends Rating {}
+
 /**
  * 예시 코드 사용
  */
