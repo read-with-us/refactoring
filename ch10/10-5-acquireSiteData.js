@@ -23,6 +23,10 @@ function enrichSite(inputSite) {
   return _.cloneDeep(inputSite);
 }
 
+function isUnknown(aCustomer) {
+  return aCustomer === '미확인 고객';
+}
+
 const registry = {
   billingPlan: {
     basic: 'basic',
@@ -38,17 +42,15 @@ const site = enrichSite(rawSite);
 const aCustomer = site.customer;
 // ... 수많은 코드 ...
 let customerName;
-if (aCustomer === '미확인 고객') customerName = '거주자';
+if (isUnknown(aCustomer)) customerName = '거주자';
 else customerName = aCustomer.name;
 
-const plan =
-  aCustomer === '미확인 고객'
-    ? registry.billingPlan.basic
-    : aCustomer.billingPlan;
+const plan = isUnknown(aCustomer)
+  ? registry.billingPlan.basic
+  : aCustomer.billingPlan;
 
-const weeksDelinquent =
-  aCustomer === '미확인 고객'
-    ? 0
-    : aCustomer.paymentHistory.weeksDelinquentInLastYear;
+const weeksDelinquent = isUnknown(aCustomer)
+  ? 0
+  : aCustomer.paymentHistory.weeksDelinquentInLastYear;
 
 console.log(customerName, plan, weeksDelinquent);
