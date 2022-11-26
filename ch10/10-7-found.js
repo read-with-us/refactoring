@@ -1,0 +1,33 @@
+/**
+ * p408 예시
+ */
+
+function found() {
+  // 생략(중요하지 않은 코드)
+  let found = false;
+  for (const p of people) {
+    if (!found) {
+      if (p === '조커') {
+        sendAlert();
+        found = true;
+      }
+      if (p === '사루만') {
+        sendAlert();
+        found = true;
+      }
+    }
+  }
+  // 생략
+}
+
+/**
+ * 예시 실행을 위한 임의의 코드
+ */
+
+const people = ['조커', '배트맨'];
+
+function sendAlert() {
+  console.log('send alert');
+}
+
+found();
