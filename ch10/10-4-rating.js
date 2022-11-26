@@ -48,14 +48,12 @@ class Rating {
     if (this.#voyage.zone === '중국') result += 1;
     if (this.#voyage.zone === '동인동') result += 1;
     result += this.historyLengthFactor;
-    result += this.voyageAndHistoryLengthFactor;
+    result += this.voyageLengthFactor;
     return result;
   }
 
-  get voyageAndHistoryLengthFactor() {
-    let result = 0;
-    if (this.#voyage.length > 14) result -= 1;
-    return result;
+  get voyageLengthFactor() {
+    return this.#voyage.length > 14 ? -1 : 0;
   }
 
   get historyLengthFactor() {
@@ -77,7 +75,7 @@ class ExperiencedChinaRating extends Rating {
     return Math.max(result, 0);
   }
 
-  get voyageAndHistoryLengthFactor() {
+  get voyageLengthFactor() {
     let result = 0;
     result += 3;
     if (this.voyage.length > 12) result += 1;
