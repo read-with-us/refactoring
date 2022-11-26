@@ -47,6 +47,13 @@ class UnknownCustomer {
   }
 }
 
+function isUnknown(arg) {
+  if (!(arg instanceof Customer || arg === '미확인 고객')) {
+    throw new Error(`잘못된 값과 비교: <${arg}>`);
+  }
+  return arg === '미확인 고객';
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -69,7 +76,7 @@ const newPlan = 'new';
 const aCustomer = site.customer;
 // ... 수많은 코드 ...
 let customerName;
-if (aCustomer === '미확인 고객') customerName = '거주자';
+if (isUnknown(aCustomer)) customerName = '거주자';
 else customerName = aCustomer.name;
 
 const plan =
