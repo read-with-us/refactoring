@@ -1,3 +1,5 @@
+[⬅️ 1장](https://github.com/read-with-us/refactoring/tree/main/ch01) | [3장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch03)
+
 # 2장 리팩터링 원칙
 
 - [2.1 리팩터링 정의](#21-리팩터링-정의)
@@ -266,3 +268,7 @@
 - `Ctrl + D`로 같은 텍스트를 전체 선택할 수 있어요. 정규식도 사용할 수 있습니다.
 
 ## 2.11 더 알고 싶다면
+
+<br>
+
+[⬅️ 1장](https://github.com/read-with-us/refactoring/tree/main/ch01) | [⬆️ 위로](#2장-리팩터링-원칙) | [3장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch03)

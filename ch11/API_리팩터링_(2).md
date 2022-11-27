@@ -1,3 +1,5 @@
+[⬅️ 10장](https://github.com/read-with-us/refactoring/tree/main/ch10) | [12장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch12)
+
 # 11장 API 리팩터링 (2)
 
 - [11.8 생성자를 팩터리 함수로 바꾸기](#118-생성자를-팩터리-함수로-바꾸기)
@@ -18,3 +20,7 @@
 ## 11.12 오류 코드를 예외로 바꾸기
 
 ## 11.13 예외를 사전확인으로 바꾸기
+
+<br>
+
+[⬅️ 10장](https://github.com/read-with-us/refactoring/tree/main/ch10) | [⬆️ 위로](#11장-API-리팩터링-2) | [12장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch12)

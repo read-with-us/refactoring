@@ -1,3 +1,5 @@
+[⬅️ 2장](https://github.com/read-with-us/refactoring/tree/main/ch02) | [4장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch04)
+
 # 3장 코드에서 나는 악취
 
 - [3.1 기이한 이름](#31-기이한-이름)
@@ -255,3 +257,7 @@
 >
 > - 프로그래밍을 시작했을 때 주석을 지나치게 남긴 기억이 나서 반성하게 되네요.
 > - 군더더기 없이 잘 작성된 주석은 코드를 이해할 때 한 줄기 빛이 됩니다.
+
+<br>
+
+[⬅️ 2장](https://github.com/read-with-us/refactoring/tree/main/ch02) | [⬆️ 위로](#3장-코드에서-나는-악취) | [4장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch04)

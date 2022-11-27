@@ -1,3 +1,5 @@
+[⬅️ 9장](https://github.com/read-with-us/refactoring/tree/main/ch09) | [11장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch11)
+
 # 10장 조건부 로직 간소화
 
 - [10.1 조건문 분해하기](#101-조건문-분해하기)
@@ -29,3 +31,7 @@
 ## 10.6 어서션 추가하기
 
 ## 10.7 제어 플래그를 탈출문으로 바꾸기
+
+<br>
+
+[⬅️ 9장](https://github.com/read-with-us/refactoring/tree/main/ch09) | [⬆️ 위로](#10장-조건부-로직-간소화) | [11장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch11)

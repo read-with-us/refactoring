@@ -1,3 +1,5 @@
+[⬅️ 12장](https://github.com/read-with-us/refactoring/tree/main/ch12) | [2장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch02)
+
 # 1장 리팩터링: 첫 번째 예시
 
 - [1.1 자, 시작해보자!](#11-자-시작해보자)
@@ -30,3 +32,7 @@
 ## 1.9 상태 점검: 다형성을 활용하여 데이터 생성하기
 
 ## 1.10 마치며
+
+<br>
+
+[⬅️ 12장](https://github.com/read-with-us/refactoring/tree/main/ch12) | [⬆️ 위로](#1장-리팩터링-첫-번째-예시) | [2장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch02)

@@ -1,3 +1,5 @@
+[⬅️ 10장](https://github.com/read-with-us/refactoring/tree/main/ch10) | [12장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch12)
+
 # 11장 API 리팩터링 (1)
 
 - [11.1 질의 함수와 변경 함수 분리하기](#111-질의-함수와-변경-함수-분리하기)
@@ -21,3 +23,7 @@
 ## 11.6 질의 함수를 매개변수로 바꾸기
 
 ## 11.7 세터 제거하기
+
+<br>
+
+[⬅️ 10장](https://github.com/read-with-us/refactoring/tree/main/ch10) | [⬆️ 위로](#11장-API-리팩터링-1) | [12장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch12)

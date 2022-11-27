@@ -1,3 +1,5 @@
+[⬅️ 6장](https://github.com/read-with-us/refactoring/tree/main/ch06) | [8장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch08)
+
 # 7장 캡슐화
 
 - [7.1 레코드 캡슐화하기](#71-레코드-캡슐화하기)
@@ -263,3 +265,7 @@ function foundPerson(people) {
   return people.find((p) => candidates.includes(p)) || '';
 }
 ```
+
+<br>
+
+[⬅️ 6장](https://github.com/read-with-us/refactoring/tree/main/ch06) | [⬆️ 위로](#7장-캡슐화) | [8장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch08)

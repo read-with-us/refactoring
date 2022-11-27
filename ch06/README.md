@@ -1,3 +1,5 @@
+[⬅️ 4장](https://github.com/read-with-us/refactoring/tree/main/ch04) | [7장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch07)
+
 # 6장 기본적인 리팩터링
 
 - [6.1 함수 추출하기](#61-함수-추출하기)
@@ -224,3 +226,7 @@ p223
 p234
 
 > 핵심은 어디까지나 단계를 명확히 분리하는 데 있기 때문이다.
+
+<br>
+
+[⬅️ 4장](https://github.com/read-with-us/refactoring/tree/main/ch04) | [⬆️ 위로](#6장-기본적인-리팩터링) | [7장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch07)

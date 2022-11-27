@@ -1,3 +1,5 @@
+[⬅️ 3장](https://github.com/read-with-us/refactoring/tree/main/ch03) | [6장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch06)
+
 # 4장 테스트 구축
 
 - [4.1 자가 테스트 코드의 가치](#41-자가-테스트-코드의-가치)
@@ -160,3 +162,7 @@ p.152
 > 테스트 커버리지가 높을수록 무조건 좋은것인지
 >
 > 모든 곳에 테스트 코드를 작성하는 것이 오히려 생산성을 낮출 수 있다고 생각
+
+<br>
+
+[⬅️ 3장](https://github.com/read-with-us/refactoring/tree/main/ch03) | [⬆️ 위로](#4장-테스트-구축) | [6장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch06)

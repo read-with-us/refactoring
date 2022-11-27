@@ -1,3 +1,5 @@
+[⬅️ 7장](https://github.com/read-with-us/refactoring/tree/main/ch07) | [9장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch09)
+
 # 8장 기능 이동
 
 - [8.1 함수 옮기기](#81-함수-옮기기)
@@ -130,3 +132,7 @@ p.327
 
 > 1. 사용되지 않는 코드가 있다면 그 소프트웨어의 동작을 이해하는 데는 커다란 걸림돌이 될 수 있다.
 > 2. 코드가 더 이상 사용되지 않게 됐다면 지워야한다.
+
+<br>
+
+[⬅️ 7장](https://github.com/read-with-us/refactoring/tree/main/ch07) | [⬆️ 위로](#8장-기능-이동) | [9장 ➡️](https://github.com/read-with-us/refactoring/tree/main/ch09)
