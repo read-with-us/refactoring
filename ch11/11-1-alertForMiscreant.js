@@ -37,6 +37,7 @@ function setOffAlarms() {
 }
 
 const people = ['배트맨', '조커'];
-const found = alertForMiscreant(people);
+const found = findMiscreant(people);
+alertForMiscreant(people);
 
 console.log(found);
