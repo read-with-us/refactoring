@@ -47,12 +47,12 @@ const anOrder = {
  * 예시 호출 (1)
  */
 
-aShipment.deliveryDate = deliveryDate(anOrder, true);
+aShipment.deliveryDate = rushDeliveryDate(anOrder);
 console.log(aShipment.deliveryDate);
 
 /**
  * 예시 호출 (2)
  */
 
-aShipment.deliveryDate = deliveryDate(anOrder, false);
+aShipment.deliveryDate = regularDeliveryDate(anOrder);
 console.log(aShipment.deliveryDate);
