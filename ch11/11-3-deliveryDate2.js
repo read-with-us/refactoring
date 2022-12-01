@@ -24,6 +24,14 @@ function deliveryDate(anOrder, isRush) {
   return result;
 }
 
+function rushDeliveryDate(anOrder) {
+  return deliveryDate(anOrder, true);
+}
+
+function regularDeliveryDate(anOrder) {
+  return deliveryDate(anOrder, false);
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -59,7 +67,7 @@ const anOrder = {
  * 예시 호출 (1)
  */
 
-aShipment.deliveryDate = deliveryDate(anOrder, true);
+aShipment.deliveryDate = rushDeliveryDate(anOrder);
 
 console.log(aShipment.deliveryDate.time);
 
@@ -67,6 +75,6 @@ console.log(aShipment.deliveryDate.time);
  * 예시 호출 (2)
  */
 
-aShipment.deliveryDate = deliveryDate(anOrder, false);
+aShipment.deliveryDate = regularDeliveryDate(anOrder);
 
 console.log(aShipment.deliveryDate.time);
