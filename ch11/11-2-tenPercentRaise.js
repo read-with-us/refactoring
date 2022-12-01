@@ -2,12 +2,8 @@
  * p418 예시
  */
 
-function tenPercentRaise(aPerson) {
-  aPerson.salary = aPerson.salary.multiply(1.1);
-}
-
-function fivePercentRaise(aPerson) {
-  aPerson.salary = aPerson.salary.multiply(1.05);
+function raise(aPerson, factor) {
+  aPerson.salary = aPerson.salary.multiply(1 + factor);
 }
 
 /**
@@ -33,8 +29,8 @@ const person = {
   salary: new Salary(10000),
 };
 
-tenPercentRaise(person);
+raise(person, 0.1);
 console.log(person.salary.value);
 
-fivePercentRaise(person);
+raise(person, 0.05);
 console.log(person.salary.value);
