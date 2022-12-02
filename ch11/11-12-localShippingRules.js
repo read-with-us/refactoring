@@ -15,6 +15,20 @@ function calculateShippingCosts(anOrder) {
   // 더 관련 없는 코드
 }
 
+class OrderProcessingError extends Error {
+  #code;
+  constructor(errorCode) {
+    super(`주문 처리 오류 ${errorCode}`);
+    this.#code = errorCode;
+  }
+  get name() {
+    return 'OrderProcessingError';
+  }
+  get code() {
+    return this.#code;
+  }
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
