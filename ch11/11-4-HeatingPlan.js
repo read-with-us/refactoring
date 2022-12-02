@@ -37,8 +37,6 @@ const alerts = [];
  * 예시 호출
  */
 
-const low = aRoom.daysTempRange.low;
-const high = aRoom.daysTempRange.high;
 if (!aPlan.xxNEWwithinRange(aRoom.daysTempRange)) {
   alerts.push('방 온도가 지정 범위를 벗어났습니다.');
 }
