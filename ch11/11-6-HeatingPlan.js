@@ -45,6 +45,16 @@ function setOff() {
  * 예시 호출
  */
 
-if (thePlan.targetTemperature > thermostat.currentTemperature) setToHeat();
-else if (thePlan.targetTemperature < thermostat.currentTemperature) setToCool();
-else setOff();
+if (
+  thePlan.xxNEWtargetTemparature(thermostat.selectedTemperature) >
+  thermostat.currentTemperature
+) {
+  setToHeat();
+} else if (
+  thePlan.xxNEWtargetTemparature(thermostat.selectedTemperature) <
+  thermostat.currentTemperature
+) {
+  setToCool();
+} else {
+  setOff();
+}
