@@ -24,10 +24,7 @@ class Score {
     this.#healthLevel = 0;
     this.#highMedicalRiskFlag = false;
 
-    if (this.#medicalExam.isSmoker) {
-      this.#healthLevel += 10;
-      this.#highMedicalRiskFlag = true;
-    }
+    this.scoreSmoking();
     let certificationGrade = 'regular';
     if (
       this.#scoringGuide.stateWithLowCertification(this.#candidate.originState)
@@ -38,6 +35,13 @@ class Score {
     // 비슷한 코드가 한참 이어짐
     this.#result -= Math.max(this.#healthLevel - 5, 0);
     return this.#result;
+  }
+
+  scoreSmoking() {
+    if (this.#medicalExam.isSmoker) {
+      this.#healthLevel += 10;
+      this.#highMedicalRiskFlag = true;
+    }
   }
 }
 
