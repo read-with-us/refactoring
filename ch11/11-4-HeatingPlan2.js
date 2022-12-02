@@ -8,10 +8,10 @@ class HeatingPlan {
     this.#temperatureRange = { low, high };
   }
 
-  withinRange(tempRange) {
+  withinRange(aNumberRange) {
     return (
-      tempRange.low >= this.#temperatureRange.low &&
-      tempRange.high <= this.#temperatureRange.high
+      aNumberRange.low >= this.#temperatureRange.low &&
+      aNumberRange.high <= this.#temperatureRange.high
     );
   }
 }
@@ -35,8 +35,7 @@ const alerts = [];
  * 예시 호출
  */
 
-const isWithinRange = aPlan.withinRange(aRoom.daysTempRange);
-if (!isWithinRange) {
+if (!aPlan.withinRange(aRoom.daysTempRange)) {
   alerts.push('방 온도가 지정 범위를 벗어났습니다.');
 }
 
