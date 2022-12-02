@@ -15,6 +15,13 @@ class HeatingPlan {
   }
 }
 
+function xxNEWwithinRange(aPlan, tempRange) {
+  const low = tempRange.low;
+  const high = tempRange.high;
+  const isWithinRange = aPlan.withinRange(low, high);
+  return isWithinRange;
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -35,9 +42,7 @@ const alerts = [];
  */
 
 const tempRange = aRoom.daysTempRange;
-const low = tempRange.low;
-const high = tempRange.high;
-const isWithinRange = aPlan.withinRange(low, high);
+const isWithinRange = xxNEWwithinRange(aPlan, tempRange);
 if (!isWithinRange) {
   alerts.push('방 온도가 지정 범위를 벗어났습니다.');
 }
