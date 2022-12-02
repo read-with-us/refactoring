@@ -17,9 +17,6 @@ class Person {
   get id() {
     return this.#id;
   }
-  set id(arg) {
-    this.#id = arg;
-  }
 }
 
 /**
