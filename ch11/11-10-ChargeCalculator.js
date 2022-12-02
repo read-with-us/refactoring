@@ -16,7 +16,8 @@ class ChargeCalculator {
     return this.#customer.baseRate * this.#usage;
   }
   get charge() {
-    return this.baseCharge + this.#provider.connectionCharge;
+    const baseCharge = this.baseCharge;
+    return baseCharge + this.#provider.connectionCharge;
   }
 }
 
