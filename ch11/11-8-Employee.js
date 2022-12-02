@@ -21,6 +21,10 @@ class Employee {
   }
 }
 
+function createEmployee(name, typeCode) {
+  return new Employee(name, typeCode);
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -37,12 +41,12 @@ let candidate;
  * 예시 호출 (1)
  */
 
-candidate = new Employee(document.name, document.empType);
+candidate = createEmployee(document.name, document.empType);
 console.log(candidate.name, candidate.type);
 
 /**
  * 예시 호출 (2)
  */
 
-const leadEngineer = new Employee(document.leadEngineer, 'E');
+const leadEngineer = createEmployee(document.leadEngineer, 'E');
 console.log(leadEngineer.name, leadEngineer.type);
