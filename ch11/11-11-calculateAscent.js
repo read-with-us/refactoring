@@ -11,7 +11,7 @@ const points = [{ elevation: 5000 }, { elevation: 8000 }];
 let totalAscent = 0;
 let totalTime = 0;
 let totalDistance = 0;
-calculateAscent();
+totalAscent = calculateAscent();
 calculateTime();
 calculateDistance();
 const pace = totalTime / 60 / totalDistance;
@@ -21,6 +21,7 @@ function calculateAscent() {
     const verticalChange = points[i].elevation - points[i - 1].elevation;
     totalAscent += verticalChange > 0 ? verticalChange : 0;
   }
+  return totalAscent;
 }
 
 /**
