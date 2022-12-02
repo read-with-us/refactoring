@@ -8,11 +8,9 @@ const points = [{ elevation: 5000 }, { elevation: 8000 }];
  * p462 예시
  */
 
-let totalTime = 0;
-let totalDistance = 0;
 const totalAscent = calculateAscent();
-calculateTime();
-calculateDistance();
+const totalTime = calculateTime();
+const totalDistance = calculateDistance();
 const pace = totalTime / 60 / totalDistance;
 
 function calculateAscent() {
@@ -29,11 +27,15 @@ function calculateAscent() {
  */
 
 function calculateTime() {
-  totalTime = 360;
+  let result = 0;
+  result = 360;
+  return result;
 }
 
 function calculateDistance() {
-  totalDistance = 1000;
+  let result = 0;
+  result = 1000;
+  return result;
 }
 
 console.log(pace);
