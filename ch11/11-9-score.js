@@ -10,6 +10,7 @@ class Score {
   #candidate;
   #medicalExam;
   #scoringGuide;
+  #result;
   constructor(candidate, medicalExam, scoringGuide) {
     this.#candidate = candidate;
     this.#medicalExam = medicalExam;
@@ -17,7 +18,7 @@ class Score {
   }
 
   execute() {
-    let result = 0;
+    this.#result = 0;
     let healthLevel = 0;
     let highMedicalRiskFlag = false;
 
@@ -30,11 +31,11 @@ class Score {
       this.#scoringGuide.stateWithLowCertification(this.#candidate.originState)
     ) {
       certificationGrade = 'low';
-      result -= 5;
+      this.#result -= 5;
     }
     // 비슷한 코드가 한참 이어짐
-    result -= Math.max(healthLevel - 5, 0);
-    return result;
+    this.#result -= Math.max(healthLevel - 5, 0);
+    return this.#result;
   }
 }
 
