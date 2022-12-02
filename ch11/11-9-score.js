@@ -11,6 +11,8 @@ class Score {
   #medicalExam;
   #scoringGuide;
   #result;
+  #healthLevel;
+  #highMedicalRiskFlag;
   constructor(candidate, medicalExam, scoringGuide) {
     this.#candidate = candidate;
     this.#medicalExam = medicalExam;
@@ -19,12 +21,12 @@ class Score {
 
   execute() {
     this.#result = 0;
-    let healthLevel = 0;
-    let highMedicalRiskFlag = false;
+    this.#healthLevel = 0;
+    this.#highMedicalRiskFlag = false;
 
     if (this.#medicalExam.isSmoker) {
-      healthLevel += 10;
-      highMedicalRiskFlag = true;
+      this.#healthLevel += 10;
+      this.#highMedicalRiskFlag = true;
     }
     let certificationGrade = 'regular';
     if (
@@ -34,7 +36,7 @@ class Score {
       this.#result -= 5;
     }
     // 비슷한 코드가 한참 이어짐
-    this.#result -= Math.max(healthLevel - 5, 0);
+    this.#result -= Math.max(this.#healthLevel - 5, 0);
     return this.#result;
   }
 }
