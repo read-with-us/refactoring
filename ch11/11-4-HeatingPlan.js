@@ -13,6 +13,9 @@ class HeatingPlan {
       bottom >= this.#temperatureRange.low && top <= this.#temperatureRange.high
     );
   }
+  xxNEWwithinRange(aNumberRange) {
+    return this.withinRange(aNumberRange.low, aNumberRange.high);
+  }
 }
 
 /**
