@@ -5,6 +5,9 @@
 class Person {
   #name;
   #id;
+  constructor(id) {
+    this.#id = id;
+  }
   get name() {
     return this.#name;
   }
@@ -23,8 +26,7 @@ class Person {
  * 예시 호출
  */
 
-const martin = new Person();
+const martin = new Person('1234');
 martin.name = '마틴';
-martin.id = '1234';
 
 console.log(martin.name, martin.id);
