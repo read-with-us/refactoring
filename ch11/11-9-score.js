@@ -3,26 +3,32 @@
  */
 
 function score(candidate, medicalExam, scoringGuide) {
-  return new Score(candidate).execute(medicalExam, scoringGuide);
+  return new Score(candidate, medicalExam, scoringGuide).execute();
 }
 
 class Score {
   #candidate;
-  constructor(candidate) {
+  #medicalExam;
+  #scoringGuide;
+  constructor(candidate, medicalExam, scoringGuide) {
     this.#candidate = candidate;
+    this.#medicalExam = medicalExam;
+    this.#scoringGuide = scoringGuide;
   }
 
-  execute(medicalExam, scoringGuide) {
+  execute() {
     let result = 0;
     let healthLevel = 0;
     let highMedicalRiskFlag = false;
 
-    if (medicalExam.isSmoker) {
+    if (this.#medicalExam.isSmoker) {
       healthLevel += 10;
       highMedicalRiskFlag = true;
     }
     let certificationGrade = 'regular';
-    if (scoringGuide.stateWithLowCertification(this.#candidate.originState)) {
+    if (
+      this.#scoringGuide.stateWithLowCertification(this.#candidate.originState)
+    ) {
       certificationGrade = 'low';
       result -= 5;
     }
