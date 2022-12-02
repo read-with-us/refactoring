@@ -20,6 +20,10 @@ class ChargeCalculator {
   }
 }
 
+function charge(customer, usage, provider) {
+  return new ChargeCalculator(customer, usage, provider).charge;
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -38,6 +42,6 @@ let monthCharge;
  * 예시 호출
  */
 
-monthCharge = new ChargeCalculator(customer, usage, provider).charge;
+monthCharge = charge(customer, usage, provider);
 
 console.log(monthCharge);
