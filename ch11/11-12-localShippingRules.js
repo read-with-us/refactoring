@@ -42,7 +42,8 @@ const errorList = [];
  * 예시 호출
  */
 
-const status = calculateShippingCosts(orderData);
+let status;
+status = calculateShippingCosts(orderData);
 if (status < 0) errorList.push({ order: orderData, errorCode: status });
 
 console.log(errorList);
