@@ -25,6 +25,12 @@ class Employee {
   }
 }
 
+class Engineer extends Employee {
+  get type() {
+    return "engineer";
+  }
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
