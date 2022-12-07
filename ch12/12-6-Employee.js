@@ -8,10 +8,6 @@ class Employee {
   constructor(name, type) {
     this.validateType(type);
     this.#name = name;
-    this.#type = type;
-  }
-  get type() {
-    return this.#type;
   }
 
   validateType(arg) {
