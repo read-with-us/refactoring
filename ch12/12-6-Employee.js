@@ -10,6 +10,9 @@ class Employee {
     this.#name = name;
     this.#type = type;
   }
+  get type() {
+    return this.#type;
+  }
 
   validateType(arg) {
     if (!["engineer", "manager", "salesperson"].includes(arg)) {
@@ -18,7 +21,7 @@ class Employee {
   }
 
   toString() {
-    return `${this.#name} (${this.#type})`;
+    return `${this.#name} (${this.type})`;
   }
 }
 
