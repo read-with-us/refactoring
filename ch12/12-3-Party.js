@@ -2,17 +2,10 @@
  * p482 예시
  */
 
-class Party {}
-
-class Employee extends Party {
-  #id;
+class Party {
   #name;
-  #monthlyCost;
-  constructor(name, id, monthlyCost) {
-    super();
+  constructor(name) {
     this.#name = name;
-    this.#id = id;
-    this.#monthlyCost = monthlyCost;
   }
 
   get name() {
@@ -20,17 +13,23 @@ class Employee extends Party {
   }
 }
 
+class Employee extends Party {
+  #id;
+  #name;
+  #monthlyCost;
+  constructor(name, id, monthlyCost) {
+    super(name);
+    this.#id = id;
+    this.#monthlyCost = monthlyCost;
+  }
+}
+
 class Department extends Party {
   #name;
   #staff;
   constructor(name, staff) {
-    super();
-    this.#name = name;
+    super(name);
     this.#staff = staff;
-  }
-
-  get name() {
-    return this.#name;
   }
 }
 
