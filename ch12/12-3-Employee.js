@@ -16,6 +16,10 @@ class Employee {
   }
 
   assignCar() {}
+
+  finishConstruction() {
+    if (this.isPrivileged) this.assignCar();
+  }
 }
 
 class Manager extends Employee {
@@ -29,10 +33,6 @@ class Manager extends Employee {
 
   get isPrivileged() {
     return this.#grade > 4;
-  }
-
-  finishConstruction() {
-    if (this.isPrivileged) this.assignCar();
   }
 }
 
