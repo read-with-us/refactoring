@@ -27,7 +27,7 @@ class Employee {
 
 class Engineer extends Employee {
   get type() {
-    return "engineer";
+    return "unexpected";
   }
 }
 
