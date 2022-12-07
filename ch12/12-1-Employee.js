@@ -19,7 +19,7 @@ class Department extends Party {
     return 200;
   }
 
-  get totalAnnualCost() {
+  get annualCost() {
     return this.monthlyCost * 12;
   }
 }
@@ -32,4 +32,4 @@ const employee = new Employee();
 const department = new Department();
 
 console.log(employee.annualCost);
-console.log(department.totalAnnualCost);
+console.log(department.annualCost);
