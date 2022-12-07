@@ -10,8 +10,8 @@ class Employee extends Party {
   #monthlyCost;
   constructor(name, id, monthlyCost) {
     super();
-    this.#id = id;
     this.#name = name;
+    this.#id = id;
     this.#monthlyCost = monthlyCost;
   }
 
