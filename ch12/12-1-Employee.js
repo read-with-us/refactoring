@@ -2,25 +2,21 @@
  * p477 예시
  */
 
-class Party {}
+class Party {
+  get annualCost() {
+    return this.monthlyCost * 12;
+  }
+}
 
 class Employee extends Party {
   get monthlyCost() {
     return 100;
-  }
-
-  get annualCost() {
-    return this.monthlyCost * 12;
   }
 }
 
 class Department extends Party {
   get monthlyCost() {
     return 200;
-  }
-
-  get annualCost() {
-    return this.monthlyCost * 12;
   }
 }
 
