@@ -31,12 +31,16 @@ class Engineer extends Employee {
   }
 }
 
+function createEmployee(name, type) {
+  return new Employee(name, type);
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
 
 const name = "마틴 파울러";
 const type = "engineer";
-const employee = new Employee(name, type);
+const employee = createEmployee(name, type);
 
 console.log(employee.toString());
