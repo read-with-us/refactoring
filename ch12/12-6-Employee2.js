@@ -2,6 +2,16 @@
  * p492 예시
  */
 
+class EmployeeType {
+  #value;
+  constructor(aString) {
+    this.#value = aString;
+  }
+  toString() {
+    return this.#value;
+  }
+}
+
 class Employee {
   #name;
   #type;
@@ -16,16 +26,20 @@ class Employee {
       throw new Error(`${arg}라는 직원 유형은 없습니다.`);
     }
   }
+  get typeString() {
+    return this.#type.toString();
+  }
   get type() {
     return this.#type;
   }
   set type(arg) {
-    this.#type = arg;
+    this.#type = new EmployeeType(arg);
   }
 
   get capitalizedType() {
     return (
-      this.#type.charAt(0).toUpperCase() + this.#type.substr(1).toLowerCase()
+      this.typeString.charAt(0).toUpperCase() +
+      this.typeString.substr(1).toLowerCase()
     );
   }
   toString() {
