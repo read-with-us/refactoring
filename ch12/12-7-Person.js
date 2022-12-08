@@ -7,7 +7,7 @@ class Person {
   #genderCode;
   constructor(name, genderCode) {
     this.#name = name;
-    this.#genderCode = genderCode || "X";
+    this.#genderCode = genderCode;
   }
   get name() {
     return this.#name;
@@ -43,7 +43,7 @@ function createPerson(aRecord) {
     case "F":
       return new Person(aRecord.name, "F");
     default:
-      return new Person(aRecord.name);
+      return new Person(aRecord.name, "X");
   }
 }
 
