@@ -13,6 +13,9 @@ class Person {
   get genderCode() {
     return "X";
   }
+  get isMale() {
+    return this instanceof Male;
+  }
   // 생략
 }
 
@@ -58,10 +61,6 @@ function loadFromInput(data) {
   return data.map((aRecord) => createPerson(aRecord));
 }
 
-const numberOfMales = people.filter((p) => isMale(p)).length;
-
-function isMale(aPerson) {
-  return aPerson instanceof Male;
-}
+const numberOfMales = people.filter((p) => p.isMale).length;
 
 console.log(numberOfMales);
