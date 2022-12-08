@@ -21,7 +21,9 @@ class Booking {
     return this.#date === "2022-12-08";
   }
   get hasTalkback() {
-    return this.#show.hasOwnProperty("talkback") && !this.isPeakDay;
+    return this.#premiumDelegate
+      ? this.#premiumDelegate.hasTalkback
+      : this.#show.hasOwnProperty("talkback") && !this.isPeakDay;
   }
   get basePrice() {
     let result = this.#show.price;
