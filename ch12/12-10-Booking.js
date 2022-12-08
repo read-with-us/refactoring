@@ -5,6 +5,7 @@
 class Booking {
   #show;
   #date;
+  #premiumDelegate;
   constructor(show, date) {
     this.#show = show;
     this.#date = date;
@@ -23,6 +24,10 @@ class Booking {
     let result = this.#show.price;
     if (this.isPeakDay) result += Math.round(result * 0.15);
     return result;
+  }
+
+  _bePremium(extras) {
+    this.#premiumDelegate = new PremiumBookingDelegate(this, extras);
   }
 }
 
@@ -57,7 +62,9 @@ function createBooking(show, date) {
 }
 
 function createPremiumBooking(show, date, extras) {
-  return new PremiumBooking(show, date, extras);
+  const result = new PremiumBooking(show, date, extras);
+  result._bePremium(extras);
+  return result;
 }
 
 /**
