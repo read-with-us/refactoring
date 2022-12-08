@@ -21,12 +21,6 @@ class Person {
   // 생략
 }
 
-class Female extends Person {
-  get genderCode() {
-    return "F";
-  }
-}
-
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -47,7 +41,7 @@ function createPerson(aRecord) {
     case "M":
       return new Person(aRecord.name, "M");
     case "F":
-      return new Female(aRecord.name);
+      return new Person(aRecord.name, "F");
     default:
       return new Person(aRecord.name);
   }
