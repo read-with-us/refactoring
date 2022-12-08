@@ -2,23 +2,13 @@
  * p492 예시
  */
 
-class EmployeeType {
-  #value;
-  constructor(aString) {
-    this.#value = aString;
-  }
-  toString() {
-    return this.#value;
-  }
-}
-
 class Employee {
   #name;
   #type;
   constructor(name, type) {
     this.validateType(type);
     this.#name = name;
-    this.#type = type;
+    this.#type = Employee.createEmployeeType(type);
   }
 
   validateType(arg) {
@@ -33,7 +23,19 @@ class Employee {
     return this.#type;
   }
   set type(arg) {
-    this.#type = new EmployeeType(arg);
+    this.#type = Employee.createEmployeeType(arg);
+  }
+  static createEmployeeType(aString) {
+    switch (aString) {
+      case "engineer":
+        return new Engineer();
+      case "manager":
+        return new Manager();
+      case "salesperson":
+        return new Salesperson();
+      default:
+        throw new Error(`${aString}라는 직원 유형은 없습니다.`);
+    }
   }
 
   get capitalizedType() {
@@ -44,6 +46,26 @@ class Employee {
   }
   toString() {
     return `${this.#name} (${this.capitalizedType})`;
+  }
+}
+
+class EmployeeType {}
+
+class Engineer extends EmployeeType {
+  toString() {
+    return "engineer";
+  }
+}
+
+class Manager extends EmployeeType {
+  toString() {
+    return "manager";
+  }
+}
+
+class Salesperson extends EmployeeType {
+  toString() {
+    return "salesperson";
   }
 }
 
