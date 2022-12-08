@@ -58,6 +58,10 @@ function loadFromInput(data) {
   return data.map((aRecord) => createPerson(aRecord));
 }
 
-const numberOfMales = people.filter((p) => p instanceof Male).length;
+const numberOfMales = people.filter((p) => isMale(p)).length;
+
+function isMale(aPerson) {
+  return aPerson instanceof Male;
+}
 
 console.log(numberOfMales);
