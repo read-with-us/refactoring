@@ -2,23 +2,27 @@
  * p502 예시
  */
 
-class Party {}
+class Party {
+  #name;
+  constructor(name) {
+    this.#name = name;
+  }
+  get name() {
+    return this.#name;
+  }
+}
 
 class Employee extends Party {
   #id;
   #name;
   #monthlyCost;
   constructor(name, id, monthlyCost) {
-    super();
+    super(name);
     this.#id = id;
-    this.#name = name;
     this.#monthlyCost = monthlyCost;
   }
   get monthlyCost() {
     return this.#monthlyCost;
-  }
-  get name() {
-    return this.#name;
   }
   get id() {
     return this.#id;
@@ -33,15 +37,11 @@ class Department extends Party {
   #name;
   #staff;
   constructor(name, staff) {
-    super();
-    this.#name = name;
+    super(name);
     this.#staff = staff;
   }
   get staff() {
     return this.#staff;
-  }
-  get name() {
-    return this.#name;
   }
 
   get totalMonthlyCost() {
