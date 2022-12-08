@@ -43,6 +43,14 @@ class PremiumBooking extends Booking {
   }
 }
 
+function createBooking(show, date) {
+  return new Booking(show, date);
+}
+
+function createPremiumBooking(show, date, extras) {
+  return new PremiumBooking(show, date, extras);
+}
+
 /**
  * 예시 실행을 위한 임의의 코드
  */
@@ -67,8 +75,8 @@ const extras = {
  * 예시 호출
  */
 
-const aBooking = new Booking(show, date);
-const aPremiumBooking = new PremiumBooking(premiumShow, premiumDate, extras);
+const aBooking = createBooking(show, date);
+const aPremiumBooking = createPremiumBooking(premiumShow, premiumDate, extras);
 
 console.log(aBooking.hasTalkback, aBooking.basePrice);
 console.log(
