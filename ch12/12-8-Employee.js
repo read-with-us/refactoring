@@ -2,11 +2,14 @@
  * p502 예시
  */
 
-class Employee {
+class Party {}
+
+class Employee extends Party {
   #id;
   #name;
   #monthlyCost;
   constructor(name, id, monthlyCost) {
+    super();
     this.#id = id;
     this.#name = name;
     this.#monthlyCost = monthlyCost;
@@ -26,10 +29,11 @@ class Employee {
   }
 }
 
-class Department {
+class Department extends Party {
   #name;
   #staff;
   constructor(name, staff) {
+    super();
     this.#name = name;
     this.#staff = staff;
   }
