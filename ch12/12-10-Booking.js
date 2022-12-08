@@ -13,6 +13,9 @@ class Booking {
   get show() {
     return this.#show;
   }
+  get premiumDelegate() {
+    return this.#premiumDelegate;
+  }
 
   get isPeakDay() {
     return this.#date === "2022-12-08";
@@ -38,7 +41,7 @@ class PremiumBooking extends Booking {
     this.#extras = extras;
   }
   get hasTalkback() {
-    return this.show.hasOwnProperty("talkback");
+    return this.premiumDelegate.hasTalkback;
   }
   get basePrice() {
     return Math.round(super.basePrice + this.#extras.premiumFee);
@@ -54,6 +57,10 @@ class PremiumBookingDelegate {
   constructor(hostBooking, extras) {
     this.#host = hostBooking;
     this.#extras = extras;
+  }
+
+  get hasTalkback() {
+    return this.#host.show.hasOwnProperty("talkback");
   }
 }
 
