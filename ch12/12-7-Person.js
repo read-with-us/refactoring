@@ -16,15 +16,9 @@ class Person {
     return this.#genderCode;
   }
   get isMale() {
-    return this instanceof Male;
+    return "M" === this.#genderCode;
   }
   // 생략
-}
-
-class Male extends Person {
-  get genderCode() {
-    return "M";
-  }
 }
 
 class Female extends Person {
@@ -51,7 +45,7 @@ const people = loadFromInput(data);
 function createPerson(aRecord) {
   switch (aRecord.gender) {
     case "M":
-      return new Male(aRecord.name);
+      return new Person(aRecord.name, "M");
     case "F":
       return new Female(aRecord.name);
     default:
