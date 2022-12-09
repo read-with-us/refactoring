@@ -24,14 +24,16 @@ class CatalogItem {
 }
 
 class Scroll {
+  #id;
   #catalogItem;
   #lastCleaned;
   constructor(id, title, tags, dateLastCleaned) {
-    this.#catalogItem = new CatalogItem(id, title, tags);
+    this.#id = id;
+    this.#catalogItem = new CatalogItem(null, title, tags);
     this.#lastCleaned = dateLastCleaned;
   }
   get id() {
-    return this.#catalogItem.id;
+    return this.#id;
   }
   get title() {
     return this.#catalogItem.title;
