@@ -39,6 +39,8 @@ class EuropeanSwallow extends Bird {
   }
 }
 
+class EuropeanSwallowDelegate {}
+
 class AfricanSwallow extends Bird {
   #numberOfCoconuts;
   constructor(data) {
