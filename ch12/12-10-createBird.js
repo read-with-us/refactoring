@@ -22,9 +22,9 @@ class Bird {
   selectSpeciesDelegate(data) {
     switch (data.type) {
       case "유럽 제비":
-        return new EuropeanSwallowDelegate();
+        return new EuropeanSwallowDelegate(data, this);
       case "아프리카 제비":
-        return new AfricanSwallowDelegate(data);
+        return new AfricanSwallowDelegate(data, this);
       case "노르웨이 파랑 앵무":
         return new NorwegianBlueParrotDelegate(data, this);
       default:
@@ -45,15 +45,25 @@ class Bird {
   }
 }
 
-class EuropeanSwallowDelegate {
+class SpeciesDelegate {
+  constructor(data, bird) {
+    this._bird = bird;
+  }
+  get plumage() {
+    return this._bird._plumage || "보통이다";
+  }
+}
+
+class EuropeanSwallowDelegate extends SpeciesDelegate {
   get airSpeedVelocity() {
     return 35;
   }
 }
 
-class AfricanSwallowDelegate {
+class AfricanSwallowDelegate extends SpeciesDelegate {
   #numberOfCoconuts;
-  constructor(data) {
+  constructor(data, bird) {
+    super(data, bird);
     this.#numberOfCoconuts = data.numberOfCoconuts;
   }
 
@@ -79,11 +89,11 @@ class NorwegianBlueParrot extends Bird {
   }
 }
 
-class NorwegianBlueParrotDelegate {
+class NorwegianBlueParrotDelegate extends SpeciesDelegate {
   #voltage;
   #isNailed;
   constructor(data, bird) {
-    this._bird = bird;
+    super(data, bird);
     this.#voltage = data.voltage;
     this.#isNailed = data.isNailed;
   }
