@@ -27,7 +27,7 @@ class Scroll {
   #id;
   #catalogItem;
   #lastCleaned;
-  constructor(id, title, tags, dateLastCleaned) {
+  constructor(id, title, tags, dateLastCleaned, catalogId, catalog) {
     this.#id = id;
     this.#catalogItem = new CatalogItem(null, title, tags);
     this.#lastCleaned = dateLastCleaned;
@@ -64,6 +64,7 @@ const aDocument = [
   {
     id: 1,
     catalogData: {
+      id: 1,
       title: "리팩터링",
       tags: ["소프트웨어 공학", "자바스크립트"],
     },
@@ -74,6 +75,7 @@ const aDocument = [
   {
     id: 2,
     catalogData: {
+      id: 2,
       title: "자바스크립트 완벽가이드",
       tags: ["프로그래밍 언어", "자바스크립트"],
     },
@@ -87,6 +89,17 @@ const LocalDate = {
   parse: (date) => date,
 };
 
+const catalog = {
+  get: (id) => {
+    const catalogItem = aDocument.find((d) => d.id === id);
+    return new CatalogItem(
+      catalogItem.id,
+      catalogItem.catalogData.title,
+      catalogItem.catalogData.tags
+    );
+  },
+};
+
 /**
  * 예시 호출
  */
@@ -97,7 +110,9 @@ const scrolls = aDocument.map(
       record.id,
       record.catalogData.title,
       record.catalogData.tags,
-      LocalDate.parse(record.lastCleaned)
+      LocalDate.parse(record.lastCleaned),
+      record.catalogData.id,
+      catalog
     )
 );
 
