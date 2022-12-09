@@ -28,7 +28,9 @@ class Booking {
   get basePrice() {
     let result = this.#show.price;
     if (this.isPeakDay) result += Math.round(result * 0.15);
-    return result;
+    return this.#premiumDelegate
+      ? this.#premiumDelegate.extendBasePrice(result)
+      : result;
   }
 
   _bePremium(extras) {
@@ -41,9 +43,6 @@ class PremiumBooking extends Booking {
   constructor(show, date, extras) {
     super(show, date);
     this.#extras = extras;
-  }
-  get basePrice() {
-    return Math.round(super.basePrice + this.#extras.premiumFee);
   }
   get hasDinner() {
     return this.#extras.hasOwnProperty("dinner") && !this.isPeakDay;
@@ -60,6 +59,9 @@ class PremiumBookingDelegate {
 
   get hasTalkback() {
     return this.#host.show.hasOwnProperty("talkback");
+  }
+  extendBasePrice(base) {
+    return Math.round(base + this.#extras.premiumFee);
   }
 }
 
