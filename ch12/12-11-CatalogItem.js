@@ -31,6 +31,15 @@ class Scroll extends CatalogItem {
     this.#catalogItem = new CatalogItem(id, title, tags);
     this.#lastCleaned = dateLastCleaned;
   }
+  get id() {
+    return this.#catalogItem.id;
+  }
+  get title() {
+    return this.#catalogItem.title;
+  }
+  hasTag(aString) {
+    return this.#catalogItem.hasTag(aString);
+  }
 
   needsCleaning(targetDate) {
     const threshold = this.hasTag("revered") ? 700 : 1500;
