@@ -27,7 +27,7 @@ class Scroll {
   #id;
   #catalogItem;
   #lastCleaned;
-  constructor(id, title, tags, dateLastCleaned, catalogId, catalog) {
+  constructor(id, dateLastCleaned, catalogId, catalog) {
     this.#id = id;
     this.#catalogItem = catalog.get(catalogId);
     this.#lastCleaned = dateLastCleaned;
@@ -108,8 +108,6 @@ const scrolls = aDocument.map(
   (record) =>
     new Scroll(
       record.id,
-      record.catalogData.title,
-      record.catalogData.tags,
       LocalDate.parse(record.lastCleaned),
       record.catalogData.id,
       catalog
