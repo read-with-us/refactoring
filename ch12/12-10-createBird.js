@@ -39,7 +39,9 @@ class Bird {
     return this._plumage || "보통이다";
   }
   get airSpeedVelocity() {
-    return null;
+    return this._speciesDelegate
+      ? this._speciesDelegate.airSpeedVelocity
+      : null;
   }
 }
 
