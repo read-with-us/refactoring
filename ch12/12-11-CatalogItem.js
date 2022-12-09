@@ -29,7 +29,7 @@ class Scroll {
   #lastCleaned;
   constructor(id, title, tags, dateLastCleaned, catalogId, catalog) {
     this.#id = id;
-    this.#catalogItem = new CatalogItem(null, title, tags);
+    this.#catalogItem = catalog.get(catalogId);
     this.#lastCleaned = dateLastCleaned;
   }
   get id() {
