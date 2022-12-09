@@ -41,14 +41,6 @@ class Booking {
   }
 }
 
-class PremiumBooking extends Booking {
-  #extras;
-  constructor(show, date, extras) {
-    super(show, date);
-    this.#extras = extras;
-  }
-}
-
 class PremiumBookingDelegate {
   #host;
   #extras;
