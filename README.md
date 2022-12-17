@@ -23,6 +23,12 @@
 >
 > 이 레포를 보고 유사한 스터디를 진행하고 싶은 분들을 위해 스터디 진행 시 소요 시간을 기록해두었으니 도움이 되시길 바랍니다.
 
+## 참여 후기
+
+|                                                                              멤버                                                                               | 후기                                                                                                                                                                                                                                                                                                                                                                           |
+| :-------------------------------------------------------------------------------------------------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| <a href="https://github.com/yisu-kim"><img src="https://avatars.githubusercontent.com/u/37607373" width="100px;" alt="@yisu-kim"/><br/><sub>@yisu-kim</sub></a> | Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. |
+
 ## 참여 방법
 
 프로젝트에 참여하기 전 [CONTRIBUTING](CONTRIBUTING.md) 문서를 읽어주세요.
