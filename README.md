@@ -123,3 +123,9 @@ node --experimental-json-modules ch01/statement.js
 - [리팩터링 이름 비교 & IDE들이 제공하는 리팩터링 목록\_『리팩터링, 2판』(개앞맵시/남기혁 옮김, 한빛미디어, 2020) - Google Sheets](https://docs.google.com/spreadsheets/d/1nFx-PjZ9Qs3QBZFzaMo6MSUSrWjSsO-iz5kpBtlVRPQ/edit#gid=866204681)
 - [Refactoring source code in Visual Studio Code](https://code.visualstudio.com/docs/editor/refactoring)
 - [FE재남: 리팩터링 스터디 - YouTube Playlist](https://www.youtube.com/playlist?list=PLjQV3hketAJmyZmqXZ1OVEFNctalbf9SX)
+
+## 후원
+
+스터디 소개 페이지와 인원 모집 그리고 온라인/오프라인 모임 장소를 지원해주신 원티드에 감사드립니다.
+
+<img src="https://user-images.githubusercontent.com/37607373/208672113-6132d9ed-efa7-48d1-b021-0956cb58a85e.png" alt="스터디 멤버들과 원티드" />
